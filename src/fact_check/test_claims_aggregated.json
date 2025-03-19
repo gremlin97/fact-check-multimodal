@@ -1,0 +1,889 @@
+{
+  "aggregated_results": [
+    {
+      "claim": "The Arunachalam et al. (2021) paper contains diagrams showing the structure of recombinant influenza vaccine components.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 2.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 1,
+          "total_weight": 2.0,
+          "items": [
+            2
+          ]
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Other": {
+          "count": 1,
+          "total_weight": 0.0,
+          "items": [
+            1
+          ]
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 2,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": 2.0,
+          "text": "<!-- image -->\n\n## Unique features of a recombinant haemagglutinin in /uniFB02 uenza vaccine that in /uniFB02 uence vaccine performance",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.0,
+          "reasoning": "This evidence confirms the existence of the Arunachalam et al. (2021) paper and its focus on recombinant hemagglutinin influenza vaccines. However, it doesn't mention the presence of diagrams."
+        },
+        {
+          "evidence_number": 1,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": 3.0,
+          "text": "## Unique features of a recombinant haemagglutinin in /uniFB02 uenza vaccine that in /uniFB02 uence vaccine performance\n\nArun B. Arunachalam 1 ✉ , Penny Post 2 and Deborah Rudin 3",
+          "assessment_type": "Not applicable",
+          "weight": 0.0,
+          "reasoning": "This evidence discusses various influenza vaccine studies but does not mention the Arunachalam et al. (2021) paper nor diagrams."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 1,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 7,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 8,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 9,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 10,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 11,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 12,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "The schematic diagram in Arunachalam et al. (2021) illustrates different bioreactor configurations used in vaccine production.",
+      "final_verdict": "Disagree/Not Supported",
+      "aggregated_score": -3.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 1,
+          "total_weight": -3.0,
+          "items": [
+            1
+          ]
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 1,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": -1,
+          "text": "Here's an extremely detailed analysis of the provided figure:\n\n**1. Figure Type:** The figure is a flowchart or process diagram.  It illustrates a multi-step process, showing the sequential steps involved in generating recombinant hemagglutinin (rHA) using a baculovirus-insect cell expression system.\n\n**2. Visual Elements:**\n\n* **Boxes:**  Rectangular boxes represent different stages or processes in the workflow.  These boxes are color-coded (explained below).\n* **Arrows:** Arrows indicate the direction of the workflow, showing the sequence of steps.\n* **Symbols:**  Simplified illustrations represent physical processes (e.g., bioreactor, centrifuge, filtration columns).\n* **Text within boxes:** Text within boxes describes the specific process or component at each step.\n* **Text outside boxes:** Text outside boxes provides additional labels and explanations.\n* **Lines and connectors:** Straight lines connect different boxes and components, showing the flow of materials or information.\n* **Legend (implicit):** The color-coding of boxes acts as an implicit legend, grouping related steps.\n\n\n**3. Colors, Patterns, and Visual Organization:**\n\n* **Light Blue Boxes:** Represent the initial DNA manipulation steps (PCR-direct cloning, recombination).\n* **Light Green Boxes:** Enclose the cell culture and initial harvest steps (cell seeding, expansion in bioreactor, harvest).\n* **Light Purple Boxes:**  Group the downstream processing steps (disc-stack centrifugation, extraction, clarification).\n* **Light Teal Boxes:**  Represent the purification steps (capture, purify, DNA removal, purification).\n* **Darker Teal/Cyan:**  Used to represent the liquid samples in the purification steps.\n* **Black:** Represents a solid phase in the purification steps (likely a resin or other solid support).\n* **Light Brown:** Represents the physical equipment (bioreactor, centrifuge, filtration columns).\n* **Organization:** The diagram is organized linearly, following the chronological order of the process.  The DNA manipulation steps are shown separately on the left, followed by the cell culture and downstream processing steps on the right.\n\n\n**4. Data Representation:**  The figure does not present quantitative data (e.g., yields, concentrations). It's purely qualitative, showing the steps in a process.  The only visual representation of quantities is the relative volumes of liquid and solid phases in the purification steps (darker teal/cyan and black boxes), but no numerical values are given.\n\n\n**5. Text Content:**\n\n* **Title:** \"Fig. 1 Generation of rHA using the baculovirus-insect cell expression system for the manufacture of RIV4. BV baculovirus.\"\n* **Sub-headings:** \"Full-length cDNA,\" \"Transfer plasmid,\" \"Polyhedrin promoter,\" \"Processing Signals,\" \"PCR-direct cloning,\" \"Linearized BV DNA,\" \"Recombination,\" \"HA gene,\" \"BV expression vector,\" \"Cell seeding,\" \"Infect with Virus bank,\" \"Expansion in bioreactor,\" \"Harvest,\" \"Extraction,\" \"Clarification,\" \"Capture,\" \"Purify,\" \"DNA removal,\" \"Purification,\" \"TFF/Formulation,\" \"TFF=Tangential Flow Filtration,\" \"Depth Filtration.\"\n* **Figure Caption:**  Includes the source of the adapted figure.\n\n\n**6. Numerical Values:** No numerical values are explicitly present in the figure itself.\n\n\n**7. Key Relationships, Patterns, or Trends:**\n\n* **Sequential Steps:** The figure clearly shows the sequential nature of the rHA production process. Each step is dependent on the successful completion of the preceding step.\n* **DNA Manipulation:** The initial steps focus on the genetic manipulation of the baculovirus vector to incorporate the HA gene.\n* **Cell Culture and Harvest:**  The process then moves to cell culture, virus production, and harvest.\n* **Downstream Processing:**  Subsequent steps involve purification and formulation of the rHA product.\n* **Purification Stages:** Multiple purification steps are shown, indicating the need for high purity of the final product.\n\n\n**8. Statistical Significance Indicators:**  No statistical significance indicators are present. This is a process diagram, not a graph showing statistical results.\n\n\n**9. Conclusions or Findings:** The figure does not present conclusions or findings in itself. It simply illustrates the methodology used to produce rHA.  Any conclusions would come from the results presented elsewhere in the paper.\n\n\n**10. Relation to Research in the Field:**\n\nThis figure is relevant to research in several fields:\n\n* **Virology:**  The figure describes a method for producing a viral protein (rHA), which is relevant to vaccine development and virology research.\n* **Biotechnology:** The figure illustrates a biotechnological process involving genetic engineering, cell culture, and protein purification.\n* **Vaccine Production:** The process depicted is directly relevant to the production of influenza vaccines.  The use of baculovirus expression systems is a common approach in vaccine development.\n* **Bioprocess Engineering:** The figure shows the different unit operations involved in the bioprocess, which is of interest to bioprocess engineers.\n\n\nIn summary, the figure is a detailed process diagram illustrating the steps involved in producing rHA using a baculovirus-insect cell expression system. It's a crucial element of the research paper, providing a visual representation of the methodology employed.  The figure's clarity and detail allow readers to understand the complex process involved in producing this recombinant protein.\n",
+          "assessment_type": "Disagrees",
+          "weight": -3.0,
+          "reasoning": "This evidence describes a figure from the correct paper.  Crucially, the description details the process of rHA generation using a baculovirus-insect cell expression system, including a bioreactor step. However, it depicts *only one* bioreactor configuration within a larger process flow and not *different* configurations as the claim states."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 2,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 6,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 7,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 8,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 9,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 10,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 11,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Figure 2 in Arunachalam et al. (2021) shows a cellular structure with molecular complexes attached to it.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 0.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [],
+      "filtering_log": [
+        {
+          "evidence_number": 1,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 2,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 6,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 7,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 8,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 9,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 10,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 11,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 12,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "The Treanor et al. (2011) paper includes a chart showing the cumulative incidence of influenza across different treatment groups.",
+      "final_verdict": "Agree",
+      "aggregated_score": 5.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 1,
+          "total_weight": 5.0,
+          "items": [
+            1
+          ]
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 1,
+          "document_name": "Treanor et al. (2011).pdf",
+          "paragraph_index": -1,
+          "text": "Here's an extremely detailed analysis of the provided figure:\n\n**1. Figure Type:**\n\nThe figure is a Kaplan-Meier plot.  This type of plot is specifically used to show the cumulative incidence of an event (in this case, culture-positive CDC-ILI due to influenza) over time.\n\n**2. Visual Elements:**\n\n* **Axes:** The plot has a horizontal x-axis representing \"CDC-ILI Date\" and a vertical y-axis representing \"Cumulative Incidence.\"  The x-axis shows dates ranging from January 1, 2008, to April 1, 2008. The y-axis is logarithmic, ranging from 0.0001 to 0.01.\n\n* **Labels:** The axes are clearly labeled with \"CDC-ILI Date\" and \"Cumulative Incidence.\"  The figure itself is labeled as \"Fig. 2.\" and has a subtitle \"Kaplan-Meier plots of the cumulative incidence of culture positive CDC-ILI due to influenza A (A) and influenza B (B) in the placebo (colid line) and FluBlok\".  Note that there is a typo in the caption: \"colid line\" should be \"solid line\".\n\n* **Legends:** While not explicitly a legend box, the caption explains that the solid red line represents influenza A and the dotted blue line represents influenza B.\n\n* **Arrows:** No arrows are present.\n\n* **Symbols:** The data is represented by a solid red line for one group and a dotted blue line for another.\n\n* **Structures:** The figure is a single, self-contained Kaplan-Meier plot.\n\n\n**3. Colors, Patterns, and Visual Organization:**\n\n* **Colors:** A solid red line is used for one data set (presumably the FluBlok group for influenza A, based on the caption), and a dotted blue line is used for the other (presumably the placebo group for influenza A).\n\n* **Patterns:** The solid and dotted line patterns distinguish between the two groups.\n\n* **Visual Organization:** The plot is clear and easy to read. The axes are appropriately scaled, and the lines are easily distinguishable.\n\n\n**4. Data Representation:**\n\nThe data is represented using step functions (lines with steps).  Each step represents an increase in the cumulative incidence of culture-positive CDC-ILI at a specific date.\n\n\n**5. Text Content:**\n\n* **Axis Labels:**  x-axis: \"CDC-ILI Date\"; y-axis: \"Cumulative Incidence\"\n* **Figure Title:** \"Fig. 2.\"\n* **Figure Subtitle:** \"Kaplan-Meier plots of the cumulative incidence of culture positive CDC-ILI due to influenza A (A) and influenza B (B) in the placebo (solid line) and FluBlok\"\n* **X-axis Tick Labels:** 01/01/2008, 01/31/2008, 03/01/2008, 04/01/2008\n* **Y-axis Tick Labels:** 0.0001, 0.0002, 0.0003, 0.0004, 0.0005, 0.0006, 0.0008, 0.001, 0.002, 0.003, 0.004, 0.005, 0.006, 0.008, 0.01\n\n\n**6. Numerical Values:**\n\nPrecise numerical values for the cumulative incidence at each date cannot be precisely determined due to the resolution of the image. However, approximate values can be estimated by visually inspecting the graph.  The y-axis is logarithmic, making precise readings difficult.  The highest point for the red line is approximately 0.0095, and the highest point for the blue line is approximately 0.0075.\n\n\n**7. Key Relationships, Patterns, or Trends:**\n\nThe red line (presumably FluBlok group for influenza A) shows a consistently higher cumulative incidence of culture-positive CDC-ILI compared to the blue line (presumably placebo group for influenza A) throughout the study period.  This suggests that the FluBlok group experienced a higher rate of influenza A illness.  The difference between the two lines is most pronounced in the later part of the study period.\n\n\n**8. Statistical Significance Indicators:**\n\nNo statistical significance indicators (e.g., p-values, asterisks) are directly shown on the figure itself.  The caption mentions \"significant differences,\" implying that statistical tests were performed, but the results of those tests are not presented in the figure.\n\n\n**9. Conclusions or Findings:**\n\nBased solely on this figure, it appears that the placebo group (blue line) had a lower cumulative incidence of influenza A illness compared to the FluBlok group (red line).  However, this is a visual observation and lacks statistical confirmation.  Further analysis and statistical testing are needed to draw definitive conclusions.\n\n\n**10. Relation to Research in the Field:**\n\nThis figure likely comes from a study investigating the effectiveness of a FluBlok influenza vaccine.  The Kaplan-Meier plot shows the cumulative incidence of illness over time, a common way to assess vaccine efficacy.  The comparison between the vaccine group and a placebo group is standard practice in vaccine trials.  The results, once statistically analyzed, would contribute to the body of knowledge on influenza vaccine effectiveness, particularly regarding the impact of antigenic mismatch between the vaccine and circulating viruses.  The discussion of prior vaccination impacting immune response highlights a known challenge in influenza vaccine development and deployment.\n",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This evidence directly describes a figure from the target paper which is a Kaplan-Meier plot, a type of chart specifically used to show cumulative incidence. The description clearly mentions different treatment groups (placebo and FluBlok) being represented in the plot."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 2,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 6,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 7,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 8,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 9,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 10,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Research papers on influenza vaccines often include diagrams depicting the binding of hemagglutinin to cell receptors.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 1.5,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 1,
+          "total_weight": 1.5,
+          "items": [
+            2
+          ]
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Other": {
+          "count": 1,
+          "total_weight": 0.0,
+          "items": [
+            1
+          ]
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 2,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": -1,
+          "text": "Here's an extremely detailed analysis of the provided figure:\n\n**1. Figure Type:** The figure is a pair of diagrams, specifically schematic representations of the molecular structure of a hemagglutinin (HA) protein in two different states.\n\n**2. Visual Elements:**\n\n* **Diagrams (a and b):** Two nearly identical diagrams showing the structure of the HA protein.  Each diagram depicts a transmembrane protein with distinct domains.\n* **HA1 and HA2 (a):**  Two distinct subunits of the HA protein are labeled HA1 (turquoise) and HA2 (orange).  These are connected by an inter-disulfide bond.\n* **HA0 (b):**  In diagram (b), the protein is shown as a single precursor polypeptide labeled HA0.\n* **Glycans:**  Multiple branched carbohydrate structures (glycans) are depicted attached to both HA1 and HA2 in (a) and HA0 in (b).  These are color-coded:  polysialylated complex glycans (purple, yellow, and dark blue in (a)) and paucimannose glycans (green in (b)).\n* **Fusion Peptide (a and b):** A short peptide sequence is highlighted in green, labeled \"Cleaved fusion peptide\" in (a) and \"Uncleaved fusion peptide\" in (b).\n* **Disulfide Bond:** A bond represented by \"S-S\" is shown connecting HA1 and HA2 in both (a) and (b).\n* **N and C Termini:** The N-terminus (N) and C-terminus (C) of the protein are indicated.\n* **Membrane:** A double line represents the cell membrane, with \"External\" and \"Internal\" labels indicating the orientation.\n* **Globular Head and Fibrous Stem (a):** These labels indicate the structural regions of the HA protein in diagram (a).\n* **Arrows:** Arrows indicate the location of the glycans and the cleaved/uncleaved fusion peptide.\n* **Labels:**  Labels clearly identify various components of the HA protein structure.\n* **Text Boxes:** Text boxes provide descriptions of the glycans and fusion peptides.\n\n\n**3. Colors, Patterns, and Visual Organization:**\n\n* **HA1:** Turquoise\n* **HA2:** Orange\n* **Cleaved Fusion Peptide (a):** Green\n* **Uncleaved Fusion Peptide (b):** Green\n* **Polysialylated Complex Glycans (a):** Purple, yellow, and dark blue (different shades within the glycan structures)\n* **Paucimannose Glycans (b):** Green\n* **Membrane:** Black lines\n* **Disulfide Bond:** Black \"S-S\"\n* **Background:** White\n* **Organization:** The diagrams are clearly labeled (a and b) and the components are visually distinct due to color-coding and labeling.\n\n\n**4. Data Representation:** The figure uses schematic diagrams, not graphs or charts.  The data is represented visually through the structural depiction of the HA protein.\n\n**5. Text Content:**\n\n* **Figure Title:** \"Fig. 2 Structural features of native HA expressed on influenza virus and rHA produced in insect cells using the baculovirus expression vector system.\"\n* **(a) Caption:**  \"HA protein (shown as monomer) extracted from influenza virus is a heterodimer comprising HA1 (turquoise) and HA2 (orange) linked though an inter-disulfide (S-S) bond and contains complex-type sialylated N-linked glycans. Cleaved fusion peptides (green) and complex glycans eliminate and mask unique epitopes on HA respectively.\"\n* **(b) Caption:** \"Recombinant HA protein (shown as monomer) expressed in insect cells as a single precursor polypeptide (HA0) with amino acid sequence identical to wild-type HA sequence and contains unsialylated\"\n* **Labels:** Globular Head, Fibrous Stem, HA1, HA2, HA0, Polysialylated complex glycans, Paucimannose glycans, Cleaved fusion peptide, Uncleaved fusion peptide, Inter-disulfide bond, Disulfide bond, External, Membrane, Internal, N, C, S-S.\n\n\n**6. Numerical Values:** No numerical values are directly present in the figure.\n\n**7. Key Relationships, Patterns, or Trends:**\n\n* **Diagram (a) shows a cleaved HA protein:**  The HA protein is depicted as two separate subunits (HA1 and HA2) linked by a disulfide bond.  The cleaved fusion peptide is visible.  The glycans are polysialylated and complex.\n* **Diagram (b) shows an uncleaved HA protein:** The HA protein is shown as a single polypeptide (HA0). The fusion peptide is uncleaved. The glycans are paucimannose.\n* **The difference highlights the post-translational processing of HA:** Diagram (a) represents the mature, processed form of HA found on the surface of influenza virus, while (b) shows the precursor form produced in the baculovirus expression system.\n\n\n**8. Statistical Significance Indicators:**  None are present. This is a schematic diagram, not a representation of statistical data.\n\n**9. Conclusions or Findings:** The figure illustrates the structural differences between native HA protein from influenza virus and recombinant HA protein produced in a baculovirus system.  The key difference lies in the cleavage of the fusion peptide and the glycosylation pattern.  The native HA is cleaved and has polysialylated complex glycans, while the recombinant HA is uncleaved and has paucimannose glycans.\n\n**10. Relation to Research in the Field:** This figure is likely from a study on influenza virus hemagglutinin.  The research likely focuses on the production and characterization of recombinant HA protein for vaccine development or other research purposes.  The differences in glycosylation and fusion peptide cleavage are important factors influencing the protein's function and immunogenicity.  The figure visually demonstrates the impact of the baculovirus expression system on the final structure of the recombinant HA protein compared to the native viral protein.\n",
+          "assessment_type": "Partially Agrees",
+          "weight": 1.5,
+          "reasoning": "This describes the FluBlok vaccine's composition, mentioning purified hemagglutinin. It indirectly supports the claim by highlighting the importance of HA in vaccine research, but it doesn't mention diagrams of HA-receptor binding."
+        },
+        {
+          "evidence_number": 1,
+          "document_name": "Treanor et al. (2011).pdf",
+          "paragraph_index": 12.0,
+          "text": "The vaccine (FluBlok) used in this study consisted of purified hemagglutinin (HA) proteins produced in insect cells using a baculovirus expression system as previously described [9]. The recombinant HA protein is not cleaved in insect cells and is referred to as rHA0. The trivalent vaccine contained 45 mcg (as measured by the single radial immunodiffusion assay) of each purified rHA0 derived from the A/Solomon Islands/3/2006 (H1N1), A/Wisconsin/67/2005 (H3N2), and B/Malaysia/2506/2004 influenza viruses recommended for the 2007-2008 influenza season formulated with 0.005% Tween ® -20 in 10mM sodium phosphate buffer pH 7.0 ± 0.4 without a preservative. Genes were cloned into baculovirus using RT-PCR from the same CDCderived vaccine seed viruses used for the production of licensed inactivated influenza vaccine for that year. Sodium dodecyl sulfatepolyacrylamide gel electrophoresis of the purified monovalent materials indicated that hemagglutinin constitutes at least 90% of the total protein. Placebo consisted of normal saline for injection, USP.\n\n## 2.2. Clinical study design",
+          "assessment_type": "Not applicable",
+          "weight": 0.0,
+          "reasoning": "This is a list of references, providing no information on the content of the papers cited."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 1,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 6,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 7,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 8,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 10,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 11,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 12,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "The Arunachalam paper shows diagrams of both virus-like particles and molecular structures of hemagglutinin proteins.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 2.5,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 1,
+          "total_weight": 2.5,
+          "items": [
+            1
+          ]
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 1,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": -1,
+          "text": "Here's an extremely detailed analysis of the provided figure:\n\n**1. Figure Type:** The figure is a pair of diagrams, specifically schematic representations of the molecular structure of a hemagglutinin (HA) protein in two different states.\n\n**2. Visual Elements:**\n\n* **Diagrams (a and b):** Two nearly identical diagrams showing the structure of the HA protein.  Each diagram depicts a transmembrane protein with distinct domains.\n* **HA1 and HA2 (a):**  Two distinct subunits of the HA protein are labeled HA1 (turquoise) and HA2 (orange).  These are connected by an inter-disulfide bond.\n* **HA0 (b):**  In diagram (b), the protein is shown as a single precursor polypeptide labeled HA0.\n* **Glycans:**  Multiple branched carbohydrate structures (glycans) are depicted attached to both HA1 and HA2 in (a) and HA0 in (b).  These are color-coded:  polysialylated complex glycans (purple, yellow, and dark blue in (a)) and paucimannose glycans (green in (b)).\n* **Fusion Peptide (a and b):** A short peptide sequence is highlighted in green, labeled \"Cleaved fusion peptide\" in (a) and \"Uncleaved fusion peptide\" in (b).\n* **Disulfide Bond:** A bond represented by \"S-S\" is shown connecting HA1 and HA2 in both (a) and (b).\n* **N and C Termini:** The N-terminus (N) and C-terminus (C) of the protein are indicated.\n* **Membrane:** A double line represents the cell membrane, with \"External\" and \"Internal\" labels indicating the orientation.\n* **Globular Head and Fibrous Stem (a):** These labels indicate the structural regions of the HA protein in diagram (a).\n* **Arrows:** Arrows indicate the location of the glycans and the cleaved/uncleaved fusion peptide.\n* **Labels:**  Labels clearly identify various components of the HA protein structure.\n* **Text Boxes:** Text boxes provide descriptions of the glycans and fusion peptides.\n\n\n**3. Colors, Patterns, and Visual Organization:**\n\n* **HA1:** Turquoise\n* **HA2:** Orange\n* **Cleaved Fusion Peptide (a):** Green\n* **Uncleaved Fusion Peptide (b):** Green\n* **Polysialylated Complex Glycans (a):** Purple, yellow, and dark blue (different shades within the glycan structures)\n* **Paucimannose Glycans (b):** Green\n* **Membrane:** Black lines\n* **Disulfide Bond:** Black \"S-S\"\n* **Background:** White\n* **Organization:** The diagrams are clearly labeled (a and b) and the components are visually distinct due to color-coding and labeling.\n\n\n**4. Data Representation:** The figure uses schematic diagrams, not graphs or charts.  The data is represented visually through the structural depiction of the HA protein.\n\n**5. Text Content:**\n\n* **Figure Title:** \"Fig. 2 Structural features of native HA expressed on influenza virus and rHA produced in insect cells using the baculovirus expression vector system.\"\n* **(a) Caption:**  \"HA protein (shown as monomer) extracted from influenza virus is a heterodimer comprising HA1 (turquoise) and HA2 (orange) linked though an inter-disulfide (S-S) bond and contains complex-type sialylated N-linked glycans. Cleaved fusion peptides (green) and complex glycans eliminate and mask unique epitopes on HA respectively.\"\n* **(b) Caption:** \"Recombinant HA protein (shown as monomer) expressed in insect cells as a single precursor polypeptide (HA0) with amino acid sequence identical to wild-type HA sequence and contains unsialylated\"\n* **Labels:** Globular Head, Fibrous Stem, HA1, HA2, HA0, Polysialylated complex glycans, Paucimannose glycans, Cleaved fusion peptide, Uncleaved fusion peptide, Inter-disulfide bond, Disulfide bond, External, Membrane, Internal, N, C, S-S.\n\n\n**6. Numerical Values:** No numerical values are directly present in the figure.\n\n**7. Key Relationships, Patterns, or Trends:**\n\n* **Diagram (a) shows a cleaved HA protein:**  The HA protein is depicted as two separate subunits (HA1 and HA2) linked by a disulfide bond.  The cleaved fusion peptide is visible.  The glycans are polysialylated and complex.\n* **Diagram (b) shows an uncleaved HA protein:** The HA protein is shown as a single polypeptide (HA0). The fusion peptide is uncleaved. The glycans are paucimannose.\n* **The difference highlights the post-translational processing of HA:** Diagram (a) represents the mature, processed form of HA found on the surface of influenza virus, while (b) shows the precursor form produced in the baculovirus expression system.\n\n\n**8. Statistical Significance Indicators:**  None are present. This is a schematic diagram, not a representation of statistical data.\n\n**9. Conclusions or Findings:** The figure illustrates the structural differences between native HA protein from influenza virus and recombinant HA protein produced in a baculovirus system.  The key difference lies in the cleavage of the fusion peptide and the glycosylation pattern.  The native HA is cleaved and has polysialylated complex glycans, while the recombinant HA is uncleaved and has paucimannose glycans.\n\n**10. Relation to Research in the Field:** This figure is likely from a study on influenza virus hemagglutinin.  The research likely focuses on the production and characterization of recombinant HA protein for vaccine development or other research purposes.  The differences in glycosylation and fusion peptide cleavage are important factors influencing the protein's function and immunogenicity.  The figure visually demonstrates the impact of the baculovirus expression system on the final structure of the recombinant HA protein compared to the native viral protein.\n",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.5,
+          "reasoning": "This evidence provides a detailed description of a figure from the Arunachalam paper clearly showing diagrams of HA protein molecular structures. However, it does not show or mention VLPs, so it only partially addresses the claim."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 6,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 7,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 8,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 9,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 10,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 2,
+          "filter": "Assessment Type Filter",
+          "reason": "Assessment is 'Not applicable'"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "The Treanor study contains graphs showing antibody responses after vaccination with different influenza vaccine formulations.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 2.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 1,
+          "total_weight": 2.0,
+          "items": [
+            3
+          ]
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Other": {
+          "count": 2,
+          "total_weight": 0.0,
+          "items": [
+            1,
+            2
+          ]
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 3,
+          "document_name": "Zimmerman et al. (2023).pdf",
+          "paragraph_index": 13.0,
+          "text": "Reasonably accurate VE and relative VE (rVE) estimates depend upon having access to a sufficient number of recipients of any given vaccine type. Research on high dose quadrivalent influenza vaccine (HD-IIV4) has reported rVE for HD-IIV4 compared with standard dose quadrivalent influenza vaccine (SD-IIV4) of 24 % against laboratory-confirmed influenza [7] and 27 % against influenza hospitalization [8]. Several studies of cell-cultured influenza vaccine were conducted prior to the 2019-2020 season (when all four vaccine strains were cell-cultured) and have not shown significant rVE against influenza illness compared with SD-IIV4 [9]. A large retrospective study of Medicare beneficiaries ( /C21 65 years of age) in the 2019-2020 season demonstrated no significant rVE of cell-cultured quadrivalent influenza vaccine (ccIIV4) compared with SD-IIV4 against influenza-related hospital encounters [10]. However, the study was limited by the fact that there were no laboratory-confirmed influenza outcomes. Thus, the full benefit of cell-culture vaccine technology is still largely unknown.\n\nTwo large studies have explored rVE of recombinant quadrivalent influenza vaccine (RIV4). The Medicare beneficiaries study [10] using retrospective data as described above, reported significant rVE of RIV4 vs. SD-IIV4) against influenza-related hospital encounters. Secondly, a randomized controlled trial (RCT) found significant rVE of RIV4 compared with SD-IIV4 among adults /C21 50 years old, but not for adults /C21 65 years old [11].\n\nGiven the higher cost of newer vaccines, and the high risk of influenza complications for certain groups, including the elderly [12], there is interest in providing the most effective vaccine to the largest number of patients to prevent influenza-related morbidity and mortality. Additional rVE studies of new vaccine formulations are needed to help determine vaccination best practices. This study is a retrospective test-negative case-control study of influenza VE against hospitalization using data from electronic medical records (EMR) of a single large health system to determine the rVE of RIV4 among adults 18-64 and /C21 65 years of age in the 2018-2019 and 2019-2020 seasons.",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.0,
+          "reasoning": "This evidence lists references to studies by Treanor on influenza vaccines, specifically mentioning “immunogenicity” in some titles, suggesting that antibody responses were likely measured and potentially graphed. However, it does not explicitly confirm the presence of graphs visually representing antibody responses to different vaccine formulations."
+        },
+        {
+          "evidence_number": 1,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 109.0,
+          "text": "## 15 REFERENCES\n\n- 1. Treanor JJ, El Sahly HM, King J, et. al. Protective efficacy of a trivalent recombinant hemagglutinin protein vaccine (FluBlok) against influenza in healthy adults: a randomized, placebo-controlled trial. Vaccine. 2011, Vol. 29, pp. 7733-7739.\n- 2. Baxter R, Patriarca PA, Ensor K, et al. Evaluation of the safety, reactogenicity and immunogenicity of FluBlok trivalent recombinant baculovirus-expressed hemagglutinin influenza vaccine administered intramuscularly to healthy adults 50-64 years of age. Vaccine. 2011, Vol. 29, pp. 2272-2278.\n- 3. Keitel WA, Treanor JJ, El Sahly HM, et.al. Comparative immunogenicity of recombinant influenza hemagglutinin (rHA) and trivalent inactivated vaccines (TIVs) among persons ≥ 65 years old. Vaccine. 2009, Vol. 28, pp. 379-385.\n- 4. Izikson R, Leffell DJ, Bock SA, et. al. Randomized comparison of the safety of Flublok®versus licensed inactivated influenza vaccine in healthy, medically stable adults ≥ 50years of age. Vaccine. 2015, Vol. 33, pp. 6622-6628.\n- 5. Treanor JJ, Schiff GM, Hayden FG, et.al. Safety and immunogenicity of a baculovirusexpressed hemagglutinin influenza vaccine: a randomized controlled trial. JAMA. 2007, Vol. 297, pp. 1577-1582.\n- 6. King JC, Cox MMJ, Reisinger K, et. al. Evaluation of the safety, reactogenicity and immunogenicity of FluBlok trivalent recombinant baculovirus-expressed hemagglutinin influenza vaccine administered intramuscularly to healthy children aged 6-59 months. Vaccine. 2009, Vol. 27, pp. 6589-6594.\n- 7. CBER/FDA. Guidance for Industry: Clinical Data Needed to Support the Licensure of Seasonal Inactivated Influenza Vaccines. s.l. : DHHS/CBER/FDA, 2007.",
+          "assessment_type": "Not applicable",
+          "weight": 0.0,
+          "reasoning": "This evidence is a list of references cited in the Treanor et al. (2011) paper, but it doesn't describe the content of these cited papers in enough detail to be relevant to the claim about graphs within the Treanor study."
+        },
+        {
+          "evidence_number": 2,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 110.0,
+          "text": "- 1. Treanor JJ, El Sahly HM, King J, et. al. Protective efficacy of a trivalent recombinant hemagglutinin protein vaccine (FluBlok) against influenza in healthy adults: a randomized, placebo-controlled trial. Vaccine. 2011, Vol. 29, pp. 7733-7739.\n- 2. Baxter R, Patriarca PA, Ensor K, et al. Evaluation of the safety, reactogenicity and immunogenicity of FluBlok trivalent recombinant baculovirus-expressed hemagglutinin influenza vaccine administered intramuscularly to healthy adults 50-64 years of age. Vaccine. 2011, Vol. 29, pp. 2272-2278.\n- 3. Keitel WA, Treanor JJ, El Sahly HM, et.al. Comparative immunogenicity of recombinant influenza hemagglutinin (rHA) and trivalent inactivated vaccines (TIVs) among persons ≥ 65 years old. Vaccine. 2009, Vol. 28, pp. 379-385.\n- 4. Izikson R, Leffell DJ, Bock SA, et. al. Randomized comparison of the safety of Flublok®versus licensed inactivated influenza vaccine in healthy, medically stable adults ≥ 50years of age. Vaccine. 2015, Vol. 33, pp. 6622-6628.\n- 5. Treanor JJ, Schiff GM, Hayden FG, et.al. Safety and immunogenicity of a baculovirusexpressed hemagglutinin influenza vaccine: a randomized controlled trial. JAMA. 2007, Vol. 297, pp. 1577-1582.\n- 6. King JC, Cox MMJ, Reisinger K, et. al. Evaluation of the safety, reactogenicity and immunogenicity of FluBlok trivalent recombinant baculovirus-expressed hemagglutinin influenza vaccine administered intramuscularly to healthy children aged 6-59 months. Vaccine. 2009, Vol. 27, pp. 6589-6594.\n- 7. CBER/FDA. Guidance for Industry: Clinical Data Needed to Support the Licensure of Seasonal Inactivated Influenza Vaccines. s.l. : DHHS/CBER/FDA, 2007.\n\n## 16 HOW SUPPLIED/STORAGE AND HANDLING",
+          "assessment_type": "Not applicable",
+          "weight": 0.0,
+          "reasoning": "Similar to Evidence 1, this is another list of references from Treanor et al. (2011), which does not provide information about the specific content of Treanor's own work regarding graphs of antibody responses."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 1,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 2,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 6,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 7,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 9,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 10,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "The light-blue irregular shape in Figure 2 of Arunachalam et al. (2021) represents a biological membrane or cellular structure.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 0.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [],
+      "filtering_log": [
+        {
+          "evidence_number": 1,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 2,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 6,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 7,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 8,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 9,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 10,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 11,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 12,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    }
+  ]
+}

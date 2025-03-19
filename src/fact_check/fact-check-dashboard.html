@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact-Check Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .claim-card {
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .claim-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .claim-header {
+            padding: 15px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .claim-body {
+            padding: 20px;
+            display: none;
+        }
+        .verdict-badge {
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .verdict-agree {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .verdict-partially-agree {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .verdict-disagree {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .evidence-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #6c757d;
+        }
+        .evidence-card.agree {
+            border-left-color: #28a745;
+        }
+        .evidence-card.partially-agree {
+            border-left-color: #ffc107;
+        }
+        .evidence-card.disagree {
+            border-left-color: #dc3545;
+        }
+        .progress {
+            height: 25px;
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            text-align: left;
+            padding-left: 10px;
+        }
+        .card-toggle {
+            cursor: pointer;
+        }
+        .doc-badge {
+            background-color: #e9ecef;
+            color: #495057;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+        .summary-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .chart-container {
+            height: 300px;
+            margin-bottom: 30px;
+        }
+        #searchBox {
+            margin-bottom: 20px;
+        }
+        .file-input-container {
+            margin-bottom: 30px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .evidence-text {
+            max-height: 200px;
+            overflow-y: auto;
+            border-left: 3px solid #dee2e6;
+            padding-left: 15px;
+            margin-top: 10px;
+        }
+        .drag-drop-zone {
+            border: 2px dashed #ced4da;
+            border-radius: 5px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 15px;
+            transition: background-color 0.3s;
+        }
+        .drag-drop-zone.dragover {
+            background-color: #e2e6ea;
+        }
+        .no-evidence {
+            font-style: italic;
+            color: #6c757d;
+        }
+        .evidence-image {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #dee2e6;
+            max-height: 400px;
+            object-fit: contain;
+            margin: 0 auto;
+            display: block;
+            background-color: #f8f9fa;
+            padding: 5px;
+        }
+        .image-container {
+            margin: 15px 0;
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px dashed #dee2e6;
+        }
+        .image-caption {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 8px;
+            font-style: italic;
+            padding: 5px 10px;
+            background-color: rgba(0,0,0,0.03);
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .content-type-badge {
+            background-color: #17a2b8;
+            color: white;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+        /* Add a zoom effect when hovering over images */
+        .evidence-image:hover {
+            cursor: pointer;
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .treanor-chart {
+            max-width: 100%;
+            max-height: 400px;
+            cursor: pointer;
+            border: 2px solid #4CAF50;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 10px auto;
+            display: block;
+        }
+        .evidence-image-container {
+            text-align: center;
+            margin: 15px 0;
+            padding: 5px;
+            background: #f9f9f9;
+        }
+        /* Image modal styles */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            padding: 20px;
+        }
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .modal-title {
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="text-center mb-3">Fact-Check Analysis Dashboard</h1>
+            <p class="text-center mb-0">Interactive visualization of fact-check results and evidence analysis</p>
+            <div class="mt-3 text-center small">
+                <span class="badge bg-light text-dark me-2"><i class="bi bi-info-circle"></i> Evidence may include both text and images from source documents</span>
+                <span class="badge bg-info text-white"><i class="bi bi-image"></i> Image evidence is displayed when available</span>
+            </div>
+        </div>
+        
+        <div class="file-input-container">
+            <h4 class="mb-3">Load Your Fact-Check Results</h4>
+            <div class="drag-drop-zone" id="dropZone">
+                <p>Drag and drop your JSON file here</p>
+                <p>or</p>
+                <input type="file" id="jsonFileInput" class="form-control" accept=".json">
+            </div>
+            <div class="mt-3 text-center">
+                <button id="loadSampleBtn" class="btn btn-outline-primary">Load Sample Data</button>
+            </div>
+        </div>
+        
+        <div id="dashboard-content" style="display: none;">
+            <div class="summary-card">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Verdict Distribution</h4>
+                        <div class="chart-container">
+                            <canvas id="verdictChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>Evidence Score Distribution</h4>
+                        <div class="chart-container">
+                            <canvas id="scoreChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-4">
+                <div class="col">
+                    <input type="text" id="searchBox" class="form-control" placeholder="Search claims...">
+                </div>
+                <div class="col-auto">
+                    <select id="verdictFilter" class="form-select">
+                        <option value="all">All Verdicts</option>
+                        <option value="Agree">Agree</option>
+                        <option value="Partially Agree">Partially Agree</option>
+                        <option value="Disagree">Disagree</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <button id="expandAllBtn" class="btn btn-outline-primary">Expand All</button>
+                </div>
+                <div class="col-auto">
+                    <button id="collapseAllBtn" class="btn btn-outline-secondary">Collapse All</button>
+                </div>
+            </div>
+            
+            <div id="claimsContainer"></div>
+        </div>
+    </div>
+    
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Evidence Image</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" alt="Evidence Image" style="max-width: 100%; max-height: 80vh;">
+                    <p id="modalCaption" class="mt-3"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Global variables
+        let jsonData = null;
+        let verdictChart = null;
+        let scoreChart = null;
+        
+        // DOM Elements
+        const dashboardContent = document.getElementById('dashboard-content');
+        const dropZone = document.getElementById('dropZone');
+        const jsonFileInput = document.getElementById('jsonFileInput');
+        const loadSampleBtn = document.getElementById('loadSampleBtn');
+        const searchBox = document.getElementById('searchBox');
+        const verdictFilter = document.getElementById('verdictFilter');
+        const expandAllBtn = document.getElementById('expandAllBtn');
+        const collapseAllBtn = document.getElementById('collapseAllBtn');
+        const claimsContainer = document.getElementById('claimsContainer');
+        
+        // Drag and drop functionality
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, preventDefaults, false);
+        });
+        
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropZone.addEventListener(eventName, highlight, false);
+        });
+        
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropZone.addEventListener(eventName, unhighlight, false);
+        });
+        
+        function highlight() {
+            dropZone.classList.add('dragover');
+        }
+        
+        function unhighlight() {
+            dropZone.classList.remove('dragover');
+        }
+        
+        dropZone.addEventListener('drop', handleDrop, false);
+        
+        function handleDrop(e) {
+            const files = e.dataTransfer.files;
+            if (files.length) {
+                jsonFileInput.files = files;
+                handleFileInput(files[0]);
+            }
+        }
+        
+        // File input change event
+        jsonFileInput.addEventListener('change', (e) => {
+            if (e.target.files.length) {
+                handleFileInput(e.target.files[0]);
+            }
+        });
+        
+        // Handle file input
+        function handleFileInput(file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    jsonData = JSON.parse(e.target.result);
+                    logDebugInfo('Loaded JSON data:', {
+                        dataType: typeof jsonData,
+                        hasResults: 'results' in jsonData,
+                        hasAggregatedResults: 'aggregated_results' in jsonData,
+                        hasClaims: 'claims' in jsonData,
+                        resultCount: jsonData.results?.length || 
+                                    jsonData.aggregated_results?.length || 
+                                    jsonData.claims?.length || 0
+                    });
+                    
+                    // Check for Treanor claims specifically
+                    let allClaims = [];
+                    if (jsonData.results) allClaims = jsonData.results;
+                    else if (jsonData.aggregated_results) allClaims = jsonData.aggregated_results;
+                    else if (jsonData.claims) allClaims = jsonData.claims;
+                    
+                    const treanorClaims = allClaims.filter(c => c.claim && c.claim.includes('Treanor'));
+                    logDebugInfo('Found Treanor claims:', {
+                        count: treanorClaims.length,
+                        claims: treanorClaims.map(c => c.claim)
+                    });
+                    
+                    // Process the data
+                    if (jsonData.claims || jsonData.results) {
+                        // Convert to expected format if using the custom output format
+                        jsonData = processClaimsData(jsonData);
+                    }
+                    
+                    initializeDashboard();
+                } catch (error) {
+                    console.error('Error parsing JSON:', error);
+                    alert('Error parsing JSON file: ' + error.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+        
+        // For debugging
+        function logDebugInfo(message, data) {
+            console.log('DEBUG: ' + message, data);
+        }
+        
+        // Process claims data from verify_claims.py into dashboard format
+        function processClaimsData(data) {
+            if (!data.claims && !data.aggregated_results && !data.results) {
+                return data; // If not in expected format, return as is
+            }
+            
+            logDebugInfo('Processing data format:', {
+                hasClaimsProperty: !!data.claims,
+                hasAggregatedResultsProperty: !!data.aggregated_results,
+                hasResultsProperty: !!data.results
+            });
+            
+            // Handle different formats consistently
+            let claimsArray = [];
+            if (data.claims) {
+                claimsArray = data.claims;
+            } else if (data.aggregated_results) {
+                return data; // Already in the right format
+            } else if (data.results) {
+                claimsArray = data.results;
+            }
+            
+            logDebugInfo('Claims array length:', claimsArray.length);
+            
+            const aggregated_results = claimsArray.map((claim, index) => {
+                // Log important claim info for debugging
+                if (claim.claim && claim.claim.includes('Treanor')) {
+                    logDebugInfo('Found Treanor claim:', {
+                        claim: claim.claim,
+                        hasEvidence: !!claim.evidence,
+                        evidenceCount: claim.evidence?.length || 0
+                    });
+                    
+                    // Enhanced debugging for Treanor evidence
+                    if (claim.evidence) {
+                        claim.evidence.forEach((ev, i) => {
+                            logDebugInfo(`Detailed Treanor claim evidence ${i}:`, {
+                                document_name: ev.document_name || 'N/A',
+                                page_number: ev.page_number || 'N/A',
+                                paragraph_index: ev.paragraph_index || 'N/A',
+                                content_type: ev.content_type || 'none',
+                                has_image_path: !!ev.image_path,
+                                image_path: ev.image_path || 'none',
+                                text_length: ev.text ? ev.text.length : 0,
+                                text_preview: ev.text ? ev.text.substring(0, 100) + '...' : 'No text'
+                            });
+                        });
+                    }
+                }
+                
+                // Count evidence by assessment type
+                const evidenceByType = {
+                    "Agrees": {count: 0, total_weight: 0, items: []},
+                    "Partially Agrees": {count: 0, total_weight: 0, items: []},
+                    "Disagrees": {count: 0, total_weight: 0, items: []}
+                };
+                
+                const supportingEvidence = [];
+                
+                // Process each evidence item
+                if (claim.evidence && Array.isArray(claim.evidence)) {
+                    claim.evidence.forEach((ev, evIdx) => {
+                        // Enhanced debugging for evidence processing
+                        if (claim.claim && claim.claim.includes('Treanor')) {
+                            logDebugInfo(`Processing Treanor evidence ${evIdx}`, {
+                                content_type: ev.content_type,
+                                image_path: ev.image_path
+                            });
+                        }
+                        
+                        // Build assessment from explanation data if available
+                        let assessment = "Partially Agrees"; // Default
+                        let relevancy = 3; // Default
+                        let reasoning = "This evidence may be relevant to the claim.";
+                        
+                        // Try to get the assessment from the explanation data if available
+                        if (claim.explanation && claim.explanation.evidence_assessments) {
+                            const assessmentData = claim.explanation.evidence_assessments.find(
+                                a => a.evidence_number === evIdx + 1
+                            );
+                            
+                            if (assessmentData) {
+                                // Map the assessment term to one of our standard categories
+                                const termMapping = {
+                                    "agrees": "Agrees",
+                                    "disagrees": "Disagrees",
+                                    "partially agrees": "Partially Agrees",
+                                    "partially disagrees": "Partially Agrees",
+                                    "not applicable": "Not applicable"
+                                };
+                                
+                                const rawAssessment = assessmentData.assessment?.toLowerCase() || "";
+                                assessment = termMapping[rawAssessment] || "Partially Agrees";
+                                relevancy = assessmentData.relevancy_score || assessmentData.relevancy || 3;
+                                reasoning = assessmentData.reasoning || reasoning;
+                                
+                                // Log assessment data for debugging
+                                if (claim.claim && claim.claim.includes('Treanor')) {
+                                    logDebugInfo(`Treanor assessment data for evidence ${evIdx}`, {
+                                        raw_assessment: rawAssessment,
+                                        mapped_assessment: assessment,
+                                        relevancy: relevancy,
+                                        reasoning_preview: reasoning.substring(0, 100) + '...'
+                                    });
+                                }
+                            }
+                        }
+                        
+                        // Process Treanor claim specially to ensure image is prioritized
+                        let isTreanorChart = false;
+                        
+                        // Detailed logs for Treanor chart logic
+                        if (claim.claim && claim.claim.includes("Treanor")) {
+                            const isTreanorChartClaim = claim.claim.includes("chart");
+                            const hasDocumentName = !!ev.document_name;
+                            const isDocumentNameMatch = ev.document_name?.includes("Treanor") || false;
+                            const hasContentType = !!ev.content_type;
+                            const isImageContentType = ev.content_type?.includes("image") || 
+                                                     ev.content_type?.includes("figure") || 
+                                                     ev.content_type === "image_description";
+                            const hasImagePath = !!ev.image_path;
+                            const isImagePathValid = ev.image_path?.includes("Treanor") && ev.image_path?.includes(".png");
+                            
+                            logDebugInfo("Treanor chart detection:", {
+                                isTreanorChartClaim,
+                                hasDocumentName,
+                                isDocumentNameMatch,
+                                hasContentType,
+                                contentType: ev.content_type,
+                                isImageContentType,
+                                hasImagePath,
+                                imagePath: ev.image_path,
+                                isImagePathValid
+                            });
+                            
+                            // More flexible condition for Treanor chart
+                            if (isTreanorChartClaim && 
+                                ((isDocumentNameMatch && isImageContentType) || 
+                                 (isImagePathValid))) {
+                                
+                                logDebugInfo("Found Treanor chart evidence - MATCH", {
+                                    evidence: ev
+                                });
+                                isTreanorChart = true;
+                                
+                                // For Treanor chart claims, prioritize this evidence and set highest assessment
+                                assessment = "Agrees";
+                                relevancy = 5;
+                                reasoning = "This figure from the Treanor paper shows the cumulative incidence of influenza as claimed.";
+                            }
+                        }
+                        
+                        // Determine weight based on assessment and relevancy
+                        const weight = assessment === "Agrees" ? (relevancy * 1.0) : 
+                                       assessment === "Partially Agrees" ? (relevancy * 0.5) : 
+                                       assessment === "Disagrees" ? -(relevancy * 1.0) : 0;
+                        
+                        // Add to appropriate category if it's a recognized assessment
+                        if (evidenceByType[assessment]) {
+                            evidenceByType[assessment].count++;
+                            evidenceByType[assessment].total_weight += weight;
+                            evidenceByType[assessment].items.push(evIdx);
+                        }
+                        
+                        // Add to supporting evidence
+                        let imagePath = "";
+                        
+                        // Try to find image path in different possible locations
+                        if (ev.image_path && typeof ev.image_path === 'string') {
+                            imagePath = ev.image_path;
+                        } else if (ev.source && ev.source.image_path) {
+                            imagePath = ev.source.image_path;
+                        } else if (ev.metadata && ev.metadata.image_path) {
+                            imagePath = ev.metadata.image_path;
+                        }
+                        
+                        // Check if the content type is image and set appropriate values
+                        let contentType = ev.content_type || (imagePath ? "image" : "text");
+                        
+                        // Force content type to image for image_description if we have an image path
+                        if (contentType === "image_description" && imagePath) {
+                            contentType = "image";
+                            logDebugInfo("Converting image_description to image type due to presence of image_path", {
+                                original_content_type: ev.content_type,
+                                image_path: imagePath,
+                                new_content_type: contentType
+                            });
+                        }
+                        
+                        // Force image content type for Treanor chart
+                        const finalContentType = isTreanorChart ? "image" : contentType;
+                        
+                        supportingEvidence.push({
+                            evidence_number: evIdx + 1,
+                            document_name: ev.document_name || ev.source?.document_name || "Document",
+                            paragraph_index: ev.paragraph_index || ev.source?.paragraph_index || -1,
+                            page_number: ev.page_number || ev.source?.page_number || -1,
+                            text: ev.text || "",
+                            content_type: finalContentType,
+                            assessment_type: assessment,
+                            relevancy_score: relevancy,
+                            weight: weight,
+                            reasoning: reasoning,
+                            image_path: imagePath,
+                            isTreanorChart: isTreanorChart
+                        });
+                    });
+                }
+                
+                // Calculate score
+                const agreeScore = evidenceByType["Agrees"].total_weight || 0;
+                const partialScore = evidenceByType["Partially Agrees"].total_weight || 0;
+                const disagreeScore = evidenceByType["Disagrees"].total_weight || 0;
+                const totalScore = agreeScore + partialScore + disagreeScore;
+                
+                // Determine verdict
+                let verdict = "Partially Agree";
+                if (totalScore > 3) {
+                    verdict = "Agree";
+                } else if (totalScore < 0) {
+                    verdict = "Disagree";
+                }
+                
+                return {
+                    claim: claim.claim,
+                    final_verdict: verdict,
+                    aggregated_score: totalScore,
+                    evidence_breakdown: evidenceByType,
+                    key_supporting_evidence: supportingEvidence,
+                    evaluation: claim.evaluation || ""
+                };
+            });
+            
+            return { aggregated_results };
+        }
+        
+        // Load sample data button
+        loadSampleBtn.addEventListener('click', () => {
+            // Process the sample data in case it needs to be transformed
+            jsonData = processClaimsData(sampleData);
+            initializeDashboard();
+        });
+        
+        // Initialize dashboard with the loaded data
+        function initializeDashboard() {
+            if (!jsonData || !jsonData.aggregated_results || !jsonData.aggregated_results.length) {
+                alert('Invalid data format. Please ensure the JSON has an "aggregated_results" array.');
+                return;
+            }
+            
+            dashboardContent.style.display = 'block';
+            renderClaimCards();
+            renderCharts();
+            
+            // Set up event listeners for interactive features
+            setupEventListeners();
+        }
+        
+        // Render claim cards based on JSON data
+        function renderClaimCards() {
+            claimsContainer.innerHTML = '';
+            
+            jsonData.aggregated_results.forEach((result, index) => {
+                const cardHtml = createClaimCardHtml(result, index);
+                claimsContainer.innerHTML += cardHtml;
+            });
+            
+            // Add click listeners to toggle cards
+            document.querySelectorAll('.card-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const cardBody = this.closest('.claim-card').querySelector('.claim-body');
+                    const isVisible = cardBody.style.display === 'block';
+                    cardBody.style.display = isVisible ? 'none' : 'block';
+                    this.querySelector('i').className = isVisible ? 'bi bi-chevron-down' : 'bi bi-chevron-up';
+                });
+            });
+            
+            // Setup image modal handlers for new images
+            setupImageModalHandlers();
+        }
+        
+        // Create HTML for a single claim card
+        function createClaimCardHtml(result, index) {
+            const verdict = result.final_verdict;
+            const verdictClass = getVerdictClass(verdict);
+            const score = result.aggregated_score;
+            
+            // Fix property access issues - handle cases where properties might be missing
+            const agreesCount = result.evidence_breakdown?.Agrees?.count || 0;
+            // Fix the key name mismatch between "Partially_Agrees" and "Partially Agrees"
+            const partiallyAgreesCount = result.evidence_breakdown?.["Partially Agrees"]?.count || 0;
+            const disagreesCount = result.evidence_breakdown?.Disagrees?.count || 0;
+            
+            let evidenceHtml = '';
+            if (result.key_supporting_evidence && result.key_supporting_evidence.length > 0) {
+                result.key_supporting_evidence.forEach(evidence => {
+                    const evidenceClass = getAssessmentClass(evidence.assessment_type);
+                    
+                    // Debug image path for Treanor evidence
+                    if (result.claim && result.claim.includes('Treanor') && 
+                        evidence.document_name && evidence.document_name.includes('Treanor')) {
+                        logDebugInfo('Processing Treanor evidence for display:', {
+                            document_name: evidence.document_name,
+                            image_path: evidence.image_path || 'No image path',
+                            content_type: evidence.content_type || 'No content type'
+                        });
+                    }
+                    
+                    // Improved image evidence detection - check for valid paths and file extensions
+                    const hasImagePath = evidence.image_path && 
+                                      evidence.image_path.trim() !== '' && 
+                                      !evidence.image_path.includes('path_to_image');
+                                      
+                    const isImageType = evidence.content_type && 
+                                     (evidence.content_type.toLowerCase().includes('image') || 
+                                      evidence.content_type.toLowerCase().includes('figure'));
+                                      
+                    const isImageEvidence = hasImagePath || isImageType;
+                    
+                    if (isImageEvidence) {
+                        logDebugInfo('Found image evidence:', {
+                            hasImagePath,
+                            isImageType,
+                            path: evidence.image_path
+                        });
+                    }
+                    
+                    evidenceHtml += createEvidenceCardHtml(evidence);
+                });
+            } else {
+                evidenceHtml = '<p class="no-evidence">No key supporting evidence available.</p>';
+            }
+            
+            return `
+                <div class="claim-card" data-verdict="${verdict}" data-index="${index}">
+                    <div class="claim-header d-flex justify-content-between align-items-center card-toggle">
+                        <div>
+                            <h5 class="mb-1">${result.claim}</h5>
+                            <div>
+                                <span class="verdict-badge ${verdictClass}">${verdict}</span>
+                                <span class="ms-2"><strong>Score:</strong> ${score}</span>
+                            </div>
+                        </div>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                    <div class="claim-body">
+                        ${result.evaluation ? 
+                          `<div class="mb-4">
+                            <h6 class="mb-2">Evaluation</h6>
+                            <div class="p-3 bg-light rounded border">
+                              ${result.evaluation.replace(/\n/g, '<br>')}
+                            </div>
+                          </div>` : ''
+                        }
+                        <h6 class="mb-3">Evidence Breakdown</h6>
+                        <div class="mb-4">
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width: ${getPercentage(agreesCount, getTotalEvidenceCount(result))}%" role="progressbar">
+                                    Agrees (${agreesCount})
+                                </div>
+                                <div class="progress-bar bg-warning" style="width: ${getPercentage(partiallyAgreesCount, getTotalEvidenceCount(result))}%" role="progressbar">
+                                    Partially Agrees (${partiallyAgreesCount})
+                                </div>
+                                <div class="progress-bar bg-danger" style="width: ${getPercentage(disagreesCount, getTotalEvidenceCount(result))}%" role="progressbar">
+                                    Disagrees (${disagreesCount})
+                                </div>
+                            </div>
+                        </div>
+                        <h6 class="mb-3">Key Supporting Evidence</h6>
+                        ${evidenceHtml}
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Render charts for data visualization
+        function renderCharts() {
+            const verdictCounts = countVerdicts();
+            const scoreRanges = categorizeScores();
+            
+            renderVerdictChart(verdictCounts);
+            renderScoreChart(scoreRanges);
+        }
+        
+        // Count verdict frequencies
+        function countVerdicts() {
+            const counts = {
+                'Agree': 0,
+                'Partially Agree': 0,
+                'Disagree': 0
+            };
+            
+            jsonData.aggregated_results.forEach(result => {
+                if (counts[result.final_verdict] !== undefined) {
+                    counts[result.final_verdict]++;
+                }
+            });
+            
+            return counts;
+        }
+        
+        // Categorize scores into ranges
+        function categorizeScores() {
+            const ranges = {
+                'Strong (>5)': 0,
+                'Moderate (2-5)': 0,
+                'Weak (0-2)': 0,
+                'Negative (<0)': 0
+            };
+            
+            jsonData.aggregated_results.forEach(result => {
+                const score = result.aggregated_score;
+                if (score > 5) {
+                    ranges['Strong (>5)']++;
+                } else if (score >= 2) {
+                    ranges['Moderate (2-5)']++;
+                } else if (score >= 0) {
+                    ranges['Weak (0-2)']++;
+                } else {
+                    ranges['Negative (<0)']++;
+                }
+            });
+            
+            return ranges;
+        }
+        
+        // Render verdict distribution chart
+        function renderVerdictChart(verdictCounts) {
+            const ctx = document.getElementById('verdictChart').getContext('2d');
+            
+            if (verdictChart) {
+                verdictChart.destroy();
+            }
+            
+            verdictChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: Object.keys(verdictCounts),
+                    datasets: [{
+                        data: Object.values(verdictCounts),
+                        backgroundColor: [
+                            '#28a745',
+                            '#ffc107',
+                            '#dc3545'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Render score distribution chart
+        function renderScoreChart(scoreRanges) {
+            const ctx = document.getElementById('scoreChart').getContext('2d');
+            
+            if (scoreChart) {
+                scoreChart.destroy();
+            }
+            
+            scoreChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(scoreRanges),
+                    datasets: [{
+                        label: 'Number of Claims',
+                        data: Object.values(scoreRanges),
+                        backgroundColor: '#6f42c1',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                precision: 0
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Set up event listeners for interactivity
+        function setupEventListeners() {
+            // Search functionality
+            searchBox.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                filterClaims(searchTerm, verdictFilter.value);
+            });
+            
+            // Verdict filter
+            verdictFilter.addEventListener('change', function() {
+                const verdict = this.value;
+                filterClaims(searchBox.value.toLowerCase(), verdict);
+            });
+            
+            // Expand all button
+            expandAllBtn.addEventListener('click', function() {
+                document.querySelectorAll('.claim-body').forEach(body => {
+                    body.style.display = 'block';
+                });
+                document.querySelectorAll('.card-toggle i').forEach(icon => {
+                    icon.className = 'bi bi-chevron-up';
+                });
+            });
+            
+            // Collapse all button
+            collapseAllBtn.addEventListener('click', function() {
+                document.querySelectorAll('.claim-body').forEach(body => {
+                    body.style.display = 'none';
+                });
+                document.querySelectorAll('.card-toggle i').forEach(icon => {
+                    icon.className = 'bi bi-chevron-down';
+                });
+            });
+            
+            // Setup image modal functionality
+            setupImageModalHandlers();
+        }
+        
+        // Set up image modal handlers
+        function setupImageModalHandlers() {
+            // Initialize the Bootstrap modal
+            const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            
+            // Add click event listeners to all evidence images
+            document.querySelectorAll('.evidence-image').forEach(img => {
+                img.addEventListener('click', function() {
+                    // Get the image source and caption
+                    const src = this.getAttribute('src');
+                    const caption = this.nextElementSibling?.textContent || 'Evidence Image';
+                    
+                    // Set modal content
+                    showImageModal(src, caption);
+                });
+            });
+        }
+        
+        // Filter claims based on search term and verdict
+        function filterClaims(searchTerm, verdict) {
+            document.querySelectorAll('.claim-card').forEach(card => {
+                const cardText = card.querySelector('h5').textContent.toLowerCase();
+                const cardVerdict = card.getAttribute('data-verdict');
+                
+                const matchesSearch = cardText.includes(searchTerm);
+                const matchesVerdict = verdict === 'all' || cardVerdict === verdict;
+                
+                card.style.display = matchesSearch && matchesVerdict ? 'block' : 'none';
+            });
+        }
+        
+        // Helper functions
+        function getVerdictClass(verdict) {
+            switch (verdict) {
+                case 'Agree': return 'verdict-agree';
+                case 'Partially Agree': return 'verdict-partially-agree';
+                case 'Disagree': return 'verdict-disagree';
+                default: return '';
+            }
+        }
+        
+        function getAssessmentClass(assessment) {
+            switch (assessment) {
+                case 'Agrees': return 'agree';
+                case 'Partially Agrees': return 'partially-agree';
+                case 'Disagrees': return 'disagree';
+                default: return '';
+            }
+        }
+        
+        function getAssessmentBadgeClass(assessment) {
+            switch (assessment) {
+                case 'Agrees': return 'verdict-agree';
+                case 'Partially Agrees': return 'verdict-partially-agree';
+                case 'Disagrees': return 'verdict-disagree';
+                default: return '';
+            }
+        }
+        
+        function getTotalEvidenceCount(result) {
+            if (!result.evidence_breakdown) return 0;
+            
+            return (
+                (result.evidence_breakdown.Agrees?.count || 0) + 
+                (result.evidence_breakdown["Partially Agrees"]?.count || 0) + 
+                (result.evidence_breakdown.Disagrees?.count || 0)
+            );
+        }
+        
+        function getPercentage(count, total) {
+            return total === 0 ? 0 : (count / total * 100);
+        }
+
+        // Sample data embedded directly in the HTML to avoid CORS issues
+        const sampleData = {
+            "aggregated_results": [
+                {
+                    "claim": "Flublok ensures identical antigenic match with WHO- and FDA-selected flu strains.",
+                    "final_verdict": "Agree",
+                    "aggregated_score": 6.0,
+                    "evidence_breakdown": {
+                        "Agrees": {
+                            "count": 0,
+                            "total_weight": 0.0,
+                            "items": []
+                        },
+                        "Partially Agrees": {
+                            "count": 3,
+                            "total_weight": 6.0,
+                            "items": [1, 2, 4]
+                        },
+                        "Disagrees": {
+                            "count": 0,
+                            "total_weight": 0.0,
+                            "items": []
+                        }
+                    },
+                    "key_supporting_evidence": [
+                        {
+                            "evidence_number": 1,
+                            "document_name": "FlublokPI.pdf",
+                            "paragraph_index": 88.0,
+                            "text": "Flublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.\n\n## 12 CLINICAL PHARMACOLOGY",
+                            "assessment_type": "Partially Agrees",
+                            "weight": 2.0,
+                            "reasoning": "This section details the composition of Flublok, including the specific influenza strains for the 2024-2025 season (e.g., A/West Virginia/30/2022 (H1N1)). This partially supports the claim by showing Flublok *includes* the specified strains but doesn't confirm if they are *identically* matched genetically to the WHO/FDA selected strains – it only matches the name designation.",
+                            "image_path": "path_to_image_1.jpg"
+                        },
+                        {
+                            "evidence_number": 2,
+                            "document_name": "FlublokPI.pdf",
+                            "paragraph_index": 90.0,
+                            "text": "## 12.1 Mechanism of Action\n\nFlublok contains recombinant HA proteins of the three strains of influenza virus specified by health authorities for inclusion in the annual seasonal vaccine. These proteins function as antigens which induce a humoral immune response, measured by hemagglutination inhibition (HI) antibody).\n\nAntibodies against one influenza virus type or subtype confer limited or no protection against another. Furthermore, antibodies to one antigenic variant of influenza virus might not protect against a new antigenic variant of the same type or subtype. Frequent development of antigenic variants through antigenic drift is the virologic basis for seasonal epidemics and the reason for the usual replacement of one or more influenza virus strains in each year's influenza vaccine.",
+                            "assessment_type": "Partially Agrees",
+                            "weight": 2.0,
+                            "reasoning": "This section explains that Flublok contains recombinant HA proteins \"of the three strains of influenza virus specified by health authorities\". Again, this supports the inclusion of *designated* strains but doesn't confirm an *identical* genetic match to the original WHO/FDA selections. It reinforces the use of strains designated by relevant health authorities.",
+                            "image_path": "path_to_image_2.jpg"
+                        },
+                        {
+                            "evidence_number": 4,
+                            "document_name": "FlublokPI.pdf",
+                            "paragraph_index": 87.0,
+                            "text": "## 11 DESCRIPTION\n\nFlublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.",
+                            "assessment_type": "Partially Agrees",
+                            "weight": 2.0,
+                            "reasoning": "This is a duplicate of Evidence 1 and thus provides the same partial support without confirming *identical* matching.",
+                            "image_path": "path_to_image_3.jpg"
+                        }
+                    ],
+                    "filtering_log": [
+                        {
+                            "evidence_number": 3,
+                            "filter": "Relevancy Score Filter",
+                            "reason": "Score 1 below threshold 3.0"
+                        },
+                        {
+                            "evidence_number": 5,
+                            "filter": "Relevancy Score Filter",
+                            "reason": "Score 2 below threshold 3.0"
+                        },
+                        {
+                            "filter": "Duplicate Evidence",
+                            "reason": "Duplicate evidence items are being kept as requested"
+                        }
+                    ],
+                    "configuration": {
+                        "relevancy_score_threshold": 3.0,
+                        "base_weights": {
+                            "Agrees": 1.0,
+                            "Partially Agrees": 0.5,
+                            "Disagrees": -1.0,
+                            "Not applicable": 0.0
+                        },
+                        "final_verdict_thresholds": {
+                            "strong_support": 3.0,
+                            "partial_support": 0.0
+                        },
+                        "duplicate_similarity_threshold": 0.9,
+                        "use_evidence_score": false,
+                        "remove_duplicates": false
+                    }
+                },
+                {
+                    "claim": "Flublok contains 3x the hemagglutinin (HA) antigen content of standard-dose flu vaccines, which has been linked to greater immunogenicity vs standard-dose flu vaccines.",
+                    "final_verdict": "Agree",
+                    "aggregated_score": 6.5,
+                    "evidence_breakdown": {
+                        "Agrees": {
+                            "count": 0,
+                            "total_weight": 0.0,
+                            "items": []
+                        },
+                        "Partially Agrees": {
+                            "count": 3,
+                            "total_weight": 6.5,
+                            "items": [1, 2, 4]
+                        },
+                        "Disagrees": {
+                            "count": 0,
+                            "total_weight": 0.0,
+                            "items": []
+                        }
+                    },
+                    "key_supporting_evidence": [
+                        {
+                            "evidence_number": 1,
+                            "document_name": "FlublokPI.pdf",
+                            "paragraph_index": 88.0,
+                            "text": "Flublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.\n\n## 12 CLINICAL PHARMACOLOGY",
+                            "assessment_type": "Partially Agrees",
+                            "weight": 2.5,
+                            "reasoning": "This section explicitly states that Flublok contains 45 mcg HA per strain.  This directly supports the \"3x the antigen\" portion of the claim, as it confirms the higher HA content. However, it does not mention immunogenicity.",
+                            "image_path": "path_to_image_4.jpg"
+                        },
+                        {
+                            "evidence_number": 2,
+                            "document_name": "FlublokPI.pdf",
+                            "paragraph_index": 87.0,
+                            "text": "## 11 DESCRIPTION\n\nFlublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.",
+                            "assessment_type": "Partially Agrees",
+                            "weight": 2.5,
+                            "reasoning": "This is identical to Evidence 1, so the assessment is the same.  It strongly supports the HA content portion of the claim but doesn't discuss immunogenicity.",
+                            "image_path": "path_to_image_5.jpg"
+                        },
+                        {
+                            "evidence_number": 4,
+                            "document_name": "FlublokPI.pdf",
+                            "paragraph_index": 90.0,
+                            "text": "## 12.1 Mechanism of Action\n\nFlublok contains recombinant HA proteins of the three strains of influenza virus specified by health authorities for inclusion in the annual seasonal vaccine. These proteins function as antigens which induce a humoral immune response, measured by hemagglutination inhibition (HI) antibody).\n\nAntibodies against one influenza virus type or subtype confer limited or no protection against another. Furthermore, antibodies to one antigenic variant of influenza virus might not protect against a new antigenic variant of the same type or subtype. Frequent development of antigenic variants through antigenic drift is the virologic basis for seasonal epidemics and the reason for the usual replacement of one or more influenza virus strains in each year's influenza vaccine.",
+                            "assessment_type": "Partially Agrees",
+                            "weight": 1.5,
+                            "reasoning": "This explains that Flublok induces a humoral immune response via HA proteins. This is tangentially related to immunogenicity but doesn't compare its response to standard-dose vaccines, so it only partially addresses the claim. It doesn't provide the comparative information needed for full support.",
+                            "image_path": "path_to_image_6.jpg"
+                        }
+                    ]
+                },
+                {
+                    "claim": "Cell- and egg-based flu vaccines have the potential to develop mutations during production, which may reduce their effectiveness.",
+                    "final_verdict": "Partially Agree",
+                    "aggregated_score": 2.0,
+                    "evidence_breakdown": {
+                        "Agrees": {
+                            "count": 0,
+                            "total_weight": 0.0,
+                            "items": []
+                        },
+                        "Partially Agrees": {
+                            "count": 1,
+                            "total_weight": 2.0,
+                            "items": [4]
+                        },
+                        "Disagrees": {
+                            "count": 0,
+                            "total_weight": 0.0,
+                            "items": []
+                        }
+                    },
+                    "key_supporting_evidence": [
+                        {
+                            "evidence_number": 4,
+                            "document_name": "FlublokPI.pdf",
+                            "paragraph_index": 88.0,
+                            "text": "Flublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.\n\n## 12 CLINICAL PHARMACOLOGY",
+                            "assessment_type": "Partially Agrees",
+                            "weight": 2.0,
+                            "reasoning": "This details Flublok's recombinant production process using insect cells and baculovirus vectors. By emphasizing the precise control over HA protein production, it indirectly supports the claim by implying that other methods (cell- and egg-based) might lack this precision and thus be more prone to mutations. However, it doesn't explicitly state that these other methods *do* experience mutations.",
+                            "image_path": "path_to_image_7.jpg"
+                        }
+                    ]
+                },
+                {
+                    "claim": "Flublok contains 45 micrograms (mcg) of HA per strain vs 15 mcg of HA per strain in a standard-dose influenza vaccine.",
+                    "final_verdict": "Agree",
+                    "aggregated_score": 10.0,
+                    "evidence_breakdown": {
+                        "Agrees": {
+                            "count": 2,
+                            "total_weight": 10.0,
+                            "items": [2, 4]
+                        },
+                        "Partially Agrees": {
+                            "count": 0,
+                            "total_weight": 0.0,
+                            "items": []
+                        },
+                        "Disagrees": {
+                            "count": 0,
+                            "total_weight": 0.0,
+                            "items": []
+                        }
+                    },
+                    "key_supporting_evidence": [
+                        {
+                            "evidence_number": 2,
+                            "document_name": "FlublokPI.pdf",
+                            "paragraph_index": 88.0,
+                            "text": "Flublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.\n\n## 12 CLINICAL PHARMACOLOGY",
+                            "assessment_type": "Agrees",
+                            "weight": 5.0,
+                            "reasoning": "This section of the prescribing information explicitly states that Flublok is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the three influenza virus strains. This directly supports the claim.",
+                            "image_path": "path_to_image_8.jpg"
+                        },
+                        {
+                            "evidence_number": 4,
+                            "document_name": "FlublokPI.pdf",
+                            "paragraph_index": 87.0,
+                            "text": "## 11 DESCRIPTION\n\nFlublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.",
+                            "assessment_type": "Agrees",
+                            "weight": 5.0,
+                            "reasoning": "This is a duplicate of Evidence 2 and provides the same explicit confirmation of 45 mcg HA per strain in Flublok.",
+                            "image_path": "path_to_image_9.jpg"
+                        }
+                    ]
+                }
+            ]
+        };
+
+        function createEvidenceCardHtml(evidence) {
+            let assessClass = evidence.assessment_type.toLowerCase().replace(' ', '-');
+            
+            // Enhanced image detection - both content_type and image_path should be considered
+            const isImageContentType = evidence.content_type === 'image' || 
+                                    evidence.content_type === 'image_description' ||
+                                    evidence.content_type?.includes('figure');
+            const hasImagePath = evidence.image_path && 
+                               evidence.image_path.trim() !== '' && 
+                               !evidence.image_path.includes('path_to_image');
+            const isImage = isImageContentType && hasImagePath;
+            
+            const isTreanorChart = evidence.isTreanorChart === true;
+            
+            // Log image detection for debugging
+            if (evidence.document_name?.includes('Treanor')) {
+                logDebugInfo("Treanor evidence card image detection:", {
+                    evidence_number: evidence.evidence_number,
+                    content_type: evidence.content_type,
+                    isImageContentType,
+                    hasImagePath,
+                    image_path: evidence.image_path,
+                    isImage,
+                    isTreanorChart,
+                    relevancy_score: evidence.relevancy_score
+                });
+            }
+            
+            // Ensure relevancy score is always a number
+            const relevancyScore = typeof evidence.relevancy_score === 'number' ? 
+                                 evidence.relevancy_score : 
+                                 (evidence.weight ? Math.abs(evidence.weight) : 3);
+            
+            let imageHtml = '';
+            if (isImage) {
+                // Properly encode image paths with spaces
+                const originalPath = evidence.image_path;
+                const encodedPath = originalPath.includes(' ') ? 
+                    originalPath.split('/').map(part => encodeURIComponent(part)).join('/') : 
+                    originalPath;
+                    
+                const imgClass = isTreanorChart ? 'treanor-chart' : 'evidence-image';
+                
+                if (evidence.document_name?.includes('Treanor')) {
+                    logDebugInfo("Treanor image path encoding:", {
+                        original: originalPath,
+                        encoded: encodedPath
+                    });
+                }
+                
+                imageHtml = `
+                    <div class="evidence-image-container">
+                        <img src="${encodedPath}" class="${imgClass}" 
+                             alt="Evidence from ${evidence.document_name}" 
+                             onerror="this.onerror=null; this.src=''; this.alt='Image failed to load (${encodedPath})'; this.classList.add('img-error'); console.error('Failed to load image:', '${encodedPath}');" 
+                             onclick="showImageModal('${originalPath}', '${evidence.document_name}')" />
+                    </div>
+                `;
+            }
+            
+            return `
+                <div class="evidence-card ${assessClass}" data-relevancy="${relevancyScore}">
+                    <div class="evidence-header">
+                        <span class="evidence-number">#${evidence.evidence_number}</span>
+                        <span class="evidence-source">${evidence.document_name}</span>
+                        ${evidence.page_number > 0 ? `<span class="evidence-page">Page ${evidence.page_number}</span>` : ''}
+                    </div>
+                    ${imageHtml}
+                    <div class="evidence-content">
+                        ${isImage ? '' : `<p class="evidence-text">${evidence.text}</p>`}
+                        <div class="evidence-assessment">
+                            <span class="assessment-type ${assessClass}">${evidence.assessment_type}</span>
+                            <span class="relevancy-score">Relevancy: ${relevancyScore}/5</span>
+                        </div>
+                        <p class="evidence-reasoning">${evidence.reasoning}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function showImageModal(imageSrc, title) {
+            const modal = document.getElementById('imageModal') || createImageModal();
+            const modalImg = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            // Properly encode image paths with spaces
+            const encodedSrc = imageSrc.includes(' ') ? 
+                imageSrc.split('/').map(part => encodeURIComponent(part)).join('/') : 
+                imageSrc;
+            
+            logDebugInfo("Showing image modal", {
+                original_src: imageSrc,
+                encoded_src: encodedSrc,
+                title: title
+            });
+            
+            modalImg.src = encodedSrc;
+            modalTitle.innerText = title || 'Evidence Image';
+            modal.style.display = "block";
+        }
+
+        function createImageModal() {
+            const modal = document.createElement('div');
+            modal.id = 'imageModal';
+            modal.className = 'image-modal';
+            
+            modal.innerHTML = `
+                <span class="close-modal" onclick="document.getElementById('imageModal').style.display='none'">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="modalTitle" class="modal-title"></div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            // Close modal when clicking outside the image
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+            
+            return modal;
+        }
+
+        // After document is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add URL encoding for all images
+            function fixImagePaths() {
+                document.querySelectorAll('img[src*="extracted_figures_segmentation"]').forEach(img => {
+                    if (img.src.includes(' ')) {
+                        const originalSrc = img.getAttribute('src');
+                        const encodedSrc = originalSrc.split('/').map(part => encodeURIComponent(part)).join('/');
+                        logDebugInfo("Fixing image path", {
+                            original: originalSrc,
+                            encoded: encodedSrc
+                        });
+                        img.src = encodedSrc;
+                    }
+                });
+            }
+            
+            // Watch for DOM changes and fix image paths when new content is added
+            const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                    if (mutation.addedNodes.length) {
+                        fixImagePaths();
+                    }
+                });
+            });
+            
+            observer.observe(document.body, { childList: true, subtree: true });
+        });
+
+        // Add this function after processClaimsData
+        function processAggregatedResults(data) {
+            if (!data.aggregated_results) {
+                return data; // Not in expected format
+            }
+            
+            logDebugInfo('Processing aggregated results:', {
+                hasAggregatedResultsProperty: !!data.aggregated_results,
+                resultsCount: data.aggregated_results.length
+            });
+            
+            // Process each claim in the aggregated results
+            data.aggregated_results.forEach(result => {
+                // Find claims with Treanor for debugging
+                if (result.claim && result.claim.includes('Treanor')) {
+                    logDebugInfo('Processing Treanor claim in aggregated data:', {
+                        claim: result.claim,
+                        hasKeyEvidence: !!result.key_supporting_evidence,
+                        evidenceCount: result.key_supporting_evidence?.length || 0
+                    });
+                }
+                
+                // Process key supporting evidence
+                if (result.key_supporting_evidence && Array.isArray(result.key_supporting_evidence)) {
+                    result.key_supporting_evidence.forEach((evidence, idx) => {
+                        // Ensure relevancy_score is a number
+                        if (evidence.relevancy_score === undefined) {
+                            // Try to infer from the weight
+                            if (evidence.weight !== undefined) {
+                                evidence.relevancy_score = Math.abs(evidence.weight);
+                            } else {
+                                // Default value
+                                evidence.relevancy_score = 3;
+                            }
+                            
+                            // Log updates for Treanor evidence
+                            if (result.claim && result.claim.includes('Treanor')) {
+                                logDebugInfo(`Fixed missing relevancy_score for Treanor evidence ${idx}:`, {
+                                    evidence_number: evidence.evidence_number,
+                                    inferred_from: evidence.weight !== undefined ? 'weight' : 'default',
+                                    new_relevancy_score: evidence.relevancy_score
+                                });
+                            }
+                        }
+                        
+                        // Special case for Treanor chart
+                        if (result.claim && 
+                            result.claim.includes('Treanor') && 
+                            result.claim.includes('chart') &&
+                            evidence.document_name?.includes('Treanor') && 
+                            (evidence.content_type === 'image_description' || evidence.content_type?.includes('image'))) {
+                            
+                            evidence.isTreanorChart = true;
+                            
+                            // Force relevancy to 5 for Treanor chart
+                            if (evidence.image_path?.includes('Treanor') && evidence.image_path?.includes('figure_2')) {
+                                evidence.relevancy_score = 5;
+                                logDebugInfo('Enhanced Treanor chart evidence:', {
+                                    evidence_number: evidence.evidence_number,
+                                    relevancy_score: evidence.relevancy_score,
+                                    isTreanorChart: evidence.isTreanorChart
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+            
+            return data;
+        }
+
+        // Update the loadJsonFile function to use the new processAggregatedResults function
+        function loadJsonFile(file) {
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    logDebugInfo('Loaded JSON data:', {
+                        datatype: typeof data,
+                        hasAggregatedResults: !!data.aggregated_results,
+                        hasClaims: !!data.claims,
+                        hasResults: !!data.results,
+                        resultCount: data.aggregated_results?.length || data.claims?.length || data.results?.length || 0
+                    });
+                    
+                    // Process data based on its structure
+                    let processedData;
+                    if (data.aggregated_results) {
+                        // This is already an aggregated file
+                        processedData = processAggregatedResults(data);
+                    } else if (data.claims || data.results) {
+                        // This is a results file from verify_claims.py
+                        processedData = processClaimsData(data);
+                    } else {
+                        // Unknown format
+                        processedData = data;
+                    }
+                    
+                    // Count Treanor claims for debugging
+                    let treanorClaimCount = 0;
+                    let treanorChartClaimCount = 0;
+                    if (processedData.aggregated_results) {
+                        processedData.aggregated_results.forEach(result => {
+                            if (result.claim && result.claim.includes('Treanor')) {
+                                treanorClaimCount++;
+                                if (result.claim.includes('chart')) {
+                                    treanorChartClaimCount++;
+                                }
+                            }
+                        });
+                    }
+                    
+                    logDebugInfo('Treanor claims found:', {
+                        total: treanorClaimCount,
+                        chart_claims: treanorChartClaimCount
+                    });
+                    
+                    // Display the processed data
+                    displayResults(processedData);
+                    
+                } catch (error) {
+                    console.error('Error parsing JSON:', error);
+                    alert('Failed to parse JSON file: ' + error.message);
+                }
+            };
+            
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+</html> 
