@@ -1,0 +1,30 @@
+[project]
+name = "fact-check"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "gremlin97",email = "kasodekarsunil@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "pypdf",
+    "google-generativeai",
+    "pinecone",
+    "tqdm",
+    "python-dotenv",
+    "docling",
+    "torch (>=2.6.0,<3.0.0)",
+    "pinecone-text (>=0.10.0,<0.11.0)",
+    "pymupdf (==1.23.7)",
+    "pillow (>=11.1.0,<12.0.0)",
+    "pinecone-client (>=6.0.0,<7.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "fact_check", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

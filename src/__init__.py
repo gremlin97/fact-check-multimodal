@@ -1,0 +1,3 @@
+"""
+Fact Check Multimodal Package
+""" 

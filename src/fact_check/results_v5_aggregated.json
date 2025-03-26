@@ -1,0 +1,767 @@
+{
+  "aggregated_results": [
+    {
+      "claim": "Flublok ensures identical antigenic match with WHO- and FDA-selected flu strains.",
+      "final_verdict": "Disagree/Not Supported",
+      "aggregated_score": -10.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 2,
+          "total_weight": -10.0,
+          "items": [
+            3,
+            4
+          ]
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 3,
+          "document_name": "Treanor et al. (2011).pdf",
+          "paragraph_index": 41.0,
+          "text": "Subjects in this study were followed throughout the subsequent influenza season (mid December 2007 to end April 2008) with weekly phone calls and instructed to return to the study clinics for any acute respiratory illness, at which time a combined nasal andthroatswabforviralculturewasobtained.Theprimaryefficacy endpoint for this study was the development of culture-confirmed CDC-ILI, and we also assessed the effect of vaccination on rates of any influenza culture positive illness.\n\nA total of 582 subjects were cultured for respiratory illness, and influenza virus was isolated from 178 subjects. There were a total of 120 subjects from whom influenza A was isolated, the majority of whom (82/120, 68%) met the CDC-ILI case definition. There were a total of 59 subjects with positive cultures for influenza B, and the majority of these subjects (41/59, 69%) also met the CDC-ILI case definition.\n\nOnly 8 isolates in the study (&lt;5% of the total) were antigenically identical to the strains contained in the vaccine. All of these viruses were A/Wisconsin/67/2005-like H3N2 viruses. Two of these occurred in FluBlok recipients and 6 occurred in placebo recipients, and among these subjects one FluBlok recipient and 5 placebo recipients met the CDC-ILI definition. Therefore, we were unable to obtain a meaningful estimate of the efficacy of FluBlok against CDC-ILI due to strains represented in the vaccine.\n\nThe remaining 111 influenza A viruses were characterized as antigenic variants, i.e., they exhibited a 4-fold or greater decrease in reactivity with post infection ferret antisera in reciprocal HAI testing. These viruses included 12 H1N1 viruses antigenically resembling H1 drift variant A/Brisbane/59/2007, 41 H3N2 viruses antigenically resembling the H3 drift variant A/Brisbane/10/2007, 42H3N2virusesthat could not be identified as either A/Wisconsinlike or A/Brisbane-like, and 16 influenza viruses for which the subtype was not determined. Fifty-eight of the 59 influenza B viruses (98%) were antigenically similar to B/Florida/04/2006, representing a different clade from the vaccine strain, and one influenza B virus could not be antigenically characterized.\n\nThe cumulative rates of culture confirmed influenza illness occurring in the study population over time are shown in Fig. 2, which shows that the relative difference between the two study groups remained constant throughout the influenza season. The incidence of this and of other related endpoints in the study by group are shown in Table 3. The overall protective efficacy of FluBlok against culture positive CDC-ILI regardless of strain was 44.6% (95% CI 18.8%, 62.6%). As expected given the more extreme degree of antigenic mismatch for the influenza B component, the efficacy of FluBlok was greater against CDC-ILI due to influenza A viruses (54.4%) than influenza B viruses (23.1%), although the difference was not statistically significant ( P =.20 by logistic regression). However,wewerenotabletodemonstrateastatisticallysignificant effect for influenza B. As shown in Table 3, there were no substantial differences between the point estimates of efficacy against culture positive CDC-ILI or against any culture positive illness. Culture positive CDC-ILI associated with isolation of H1N1 viruses occurred in 9/2304 placebo recipients and 3/2344 FluBlok recipients (PE = 67%), while culture positive CDC-ILI due to H3N2 viruses",
+          "assessment_type": "Disagrees",
+          "weight": -5.0,
+          "reasoning": "This study explicitly states that less than 5% of the circulating influenza strains were antigenically identical to the vaccine strains in Flublok. This contradicts the claim that Flublok *ensures* identical matching. The study highlights significant antigenic drift, meaning the circulating strains had evolved from the vaccine strains."
+        },
+        {
+          "evidence_number": 4,
+          "document_name": "Treanor et al. (2011).pdf",
+          "paragraph_index": 40.0,
+          "text": "## 3.3. Protective efficacy\n\nSubjects in this study were followed throughout the subsequent influenza season (mid December 2007 to end April 2008) with weekly phone calls and instructed to return to the study clinics for any acute respiratory illness, at which time a combined nasal andthroatswabforviralculturewasobtained.Theprimaryefficacy endpoint for this study was the development of culture-confirmed CDC-ILI, and we also assessed the effect of vaccination on rates of any influenza culture positive illness.\n\nA total of 582 subjects were cultured for respiratory illness, and influenza virus was isolated from 178 subjects. There were a total of 120 subjects from whom influenza A was isolated, the majority of whom (82/120, 68%) met the CDC-ILI case definition. There were a total of 59 subjects with positive cultures for influenza B, and the majority of these subjects (41/59, 69%) also met the CDC-ILI case definition.\n\nOnly 8 isolates in the study (&lt;5% of the total) were antigenically identical to the strains contained in the vaccine. All of these viruses were A/Wisconsin/67/2005-like H3N2 viruses. Two of these occurred in FluBlok recipients and 6 occurred in placebo recipients, and among these subjects one FluBlok recipient and 5 placebo recipients met the CDC-ILI definition. Therefore, we were unable to obtain a meaningful estimate of the efficacy of FluBlok against CDC-ILI due to strains represented in the vaccine.\n\nThe remaining 111 influenza A viruses were characterized as antigenic variants, i.e., they exhibited a 4-fold or greater decrease in reactivity with post infection ferret antisera in reciprocal HAI testing. These viruses included 12 H1N1 viruses antigenically resembling H1 drift variant A/Brisbane/59/2007, 41 H3N2 viruses antigenically resembling the H3 drift variant A/Brisbane/10/2007, 42H3N2virusesthat could not be identified as either A/Wisconsinlike or A/Brisbane-like, and 16 influenza viruses for which the subtype was not determined. Fifty-eight of the 59 influenza B viruses (98%) were antigenically similar to B/Florida/04/2006, representing a different clade from the vaccine strain, and one influenza B virus could not be antigenically characterized.",
+          "assessment_type": "Disagrees",
+          "weight": -5.0,
+          "reasoning": "This is a duplicate of Evidence 3 and provides the same information contradicting the claim about guaranteed antigenic matching."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 1,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 2,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Flublok contains 3x the hemagglutinin (HA) antigen content of standard-dose flu vaccines, which has been linked to greater immunogenicity vs standard-dose flu vaccines.",
+      "final_verdict": "Agree",
+      "aggregated_score": 7.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 3,
+          "total_weight": 7.0,
+          "items": [
+            3,
+            4,
+            6
+          ]
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 3,
+          "document_name": "Hsiao et al. (2023).pdf",
+          "paragraph_index": 6.0,
+          "text": "Quadrivalent recombinant influenza vaccines contain three times the amount of hemagglutinin protein as standard-dose egg-based vaccines, and the recombinant formulation is not susceptible to antigenic drift during manufacturing. Data are needed on the relative effectiveness of recombinant vaccines as compared with standard-dose vaccines against influenza-related outcomes in adults under the age of 65 years.\n\n## METHODS",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.5,
+          "reasoning": "This excerpt explicitly states that quadrivalent recombinant influenza vaccines (like Flublok) contain three times the HA of standard-dose egg-based vaccines. However, it also acknowledges the need for more data on relative effectiveness, meaning a direct link to superior immunogenicity isn't yet definitively established."
+        },
+        {
+          "evidence_number": 6,
+          "document_name": "Hsiao et al. (2023).pdf",
+          "paragraph_index": 5.0,
+          "text": "## BACKGROUND\n\nQuadrivalent recombinant influenza vaccines contain three times the amount of hemagglutinin protein as standard-dose egg-based vaccines, and the recombinant formulation is not susceptible to antigenic drift during manufacturing. Data are needed on the relative effectiveness of recombinant vaccines as compared with standard-dose vaccines against influenza-related outcomes in adults under the age of 65 years.",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.5,
+          "reasoning": "Identical to Evidence 3.  It states the 3x HA content but also calls for more data on relative effectiveness, preventing a definitive conclusion about superior immunogenicity compared to standard-dose vaccines."
+        },
+        {
+          "evidence_number": 4,
+          "document_name": "Treanor et al. (2011).pdf",
+          "paragraph_index": 39.0,
+          "text": "Serum HAI antibody titers before and after immunization in FluBlok and placebo recipients are shown in Table 2. FluBlok induced serum antibody responses to all three components of the vaccine in the majority of recipients, although lower response rates were seen for the influenza B component. As expected, post vaccination geometric mean titers were substantially higher for all three components in FluBlok than in placebo recipients ( P &lt;.001 for all comparisons). The proportion of FluBlok recipients with a post-vaccination HAI titer of 1:40 or greater was 99% for the H1 component (95% CI, 97.1%, 99.5%), 97% for the H3 component (94.8%, 98.3%), and 96% for the B component (94.0%, 97.8%).\n\nAmong FluBlok recipients, subjects with a self-reported history of seasonal influenza vaccine in the year prior to the study had higher baseline titers of antibody against all three components, and had significantly lower frequencies of HAI response than did those who reported that they had not received vaccine in the previous year. Subjects who reported prior vaccine receipt also had lower post vaccination GMTs for all three components than did those without this history, and this difference was statistically significant for both influenza A components.\n\n## 3.3. Protective efficacy",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.0,
+          "reasoning": "This excerpt presents data showing FluBlok induces a strong antibody response.  The significantly higher post-vaccination GMTs suggest greater immunogenicity, but the study lacks a direct comparison to standard-dose vaccines, making it impossible to confirm if the higher HA content *directly* results in superior immunogenicity *compared* to standard-dose options."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 1,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 2,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Cell- and egg-based flu vaccines have the potential to develop mutations during production, which may reduce their effectiveness.",
+      "final_verdict": "Agree",
+      "aggregated_score": 33.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 7,
+          "total_weight": 33.0,
+          "items": [
+            1,
+            2,
+            3,
+            4,
+            7,
+            12,
+            13
+          ]
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 1,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": 15.0,
+          "text": "Lower vaccine effectiveness estimates have been observed for H3N2 than for other strains since 2009, even during seasons when the selected vaccine strain appeared to be well matched to circulating strains 27 . Differences in HA glycosylation between the vaccine strains and circulating strains are thought to have contributed to this reduced vaccine effectiveness 26 . During the 2014 2015 in -/uniFB02 uenza season, a clade 3 C.2a H3N2 strain possessing a new predicted HA glycosylation site emerged 26 . For the 2016 2017 season, the in -/uniFB02 uenza vaccine was updated to include a clade 3 C.2a H3N2 strain (A/Colorado/15/2014) containing the new glycosylation site 26 . However, this particular glycosylation site was absent in the egg-adapted virus. Consequently, antibodies induced in humans, and in ferrets, poorly neutralised the glycosylated clade 3 C.2a H3N2 strain 26 . Contrary to the eggderived vaccines and as expected, rHA containing the new glycosylation site induced optimal levels of antibodies that ef /uniFB01 ciently recognised the glycosylated clade 3 C.2a H3N2 virus 26 . The chances of introducing deleterious mutations through the adaptation of seed virus during vaccine manufacturing today are low due to the stringent quality control of the working seed virus. Indeed, as per current regulatory requirements, seed viruses must be con /uniFB01 rmed for both genetic and antigenic match with their originating wild-type virus before they can be used for vaccine production. Nonetheless, the time it takes to generate appropriate seeds could hinder the timely availability of the vaccines.\n\nRecombinant DNA technology avoids the risk of the virus acquiring egg- or cell-adapted mutations during the manufacturing process as it does not use ' live ' in /uniFB02 uenza virus. Instead, DNA coding for HA is cloned from a reference virus published in the G lobal Initiative on Sharing All In /uniFB02 uenza Data (GISAID) database and is con /uniFB01 rmed for /uniFB01 delity at the working virus bank level 28 . As such, the primary amino-acid sequence of the rHA produced using baculovirus or other recombinant expression system is identical to the HA from the wild-type virus isolate selected for seasonal in /uniFB02 uenza vaccine production. Thus, the risk of antigenic mismatch of RIV4, or other rHA vaccines in development, with the wildtype in /uniFB02 uenza strain selected for vaccines is eliminated.",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This excerpt explicitly states that egg-adapted viruses can lack crucial glycosylation sites, leading to poor antibody neutralization of circulating strains.  It highlights the 2016-2017 flu season as a specific example. It also contrasts this with recombinant HA production, which avoids this issue."
+        },
+        {
+          "evidence_number": 2,
+          "document_name": "Liu et al. (2024).pdf",
+          "paragraph_index": 20.0,
+          "text": "                        |                                                 |                                                 |\n\na HA proteins of these vaccine viruses were included in the RIV4 vaccine.\n\nb CVV: candidate vaccine virus used in the Fluzone IIV4.\n\nc CVV used in the Fluarix IIV4 vaccine.\n\nd\n\nCVV used in the ccIIV4 vaccine. For A(H1N1)pdm09 virus, the egg CVV was passaged in quali\n\n- ¶ Mix of D and G.\n- CHO: Glycosylation motif. CHO-: Loss of glycosylation motif.\n- Cell grown vaccine viruses used as reference are bolded. HA substitution due to egg-adaptions are italic and bold.\n\nAccession numbers were noted to those reference sequences downloaded from GISAID database.\n\n## Egg-adapted amino acid substitutions in egg-based vaccines in both study years",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This table clearly demonstrates specific amino acid substitutions arising from egg-adaptation in various flu vaccine strains across two study years. This directly supports the claim about mutations occurring during production."
+        },
+        {
+          "evidence_number": 3,
+          "document_name": "Liu et al. (2024).pdf",
+          "paragraph_index": 21.0,
+          "text": "## Egg-adapted amino acid substitutions in egg-based vaccines in both study years\n\nHA sequences from components of IIV4, ccIV4 and RIV4 vaccines used in both study years were /uniFB01 rst analyzed (Table 1). Within the same season, the study vaccines contained different candidate vaccine viruses (CVVs) that are antigenically-like the prototype vaccine viruses recommended by the World Health Organization (WHO) 30 . Compared to the cell-grown vaccine prototype viruses, the vaccine antigens from all 4 subtypes in the egg-based vaccines had HA substitutions due to egg-adaptation. A(H1N1)pdm09 egg CVV formulated in Fluzone IIV4 had Q223R substitution in both years, while the egg CVV used for Fluarix IIV4 and ccIIV4 in year 1 had G225A substitution instead (Table 1). For A(H3N2), year 1 egg-based vaccine had T160K (resulting in a loss of glycosylation motif at HA 158), L194P, and D225G egg-adapted changes, while year 2 egg-based vaccine had D190N and N246T substitutions. In /uniFB02 uenza B vaccine viruses remained the same in both years. Egg-based B/Victoria vaccine had T199I substitution, which can cause a loss of glycosylation motif at HA position 197; whereas egg-based B/Yamagata vaccine had a N197D substitution that can also cause a loss of glycosylation motif at HA position 197.",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This paragraph analyzes the data presented in Table 1 (Evidence 2) and explicitly states that egg-based vaccines demonstrate HA substitutions due to egg-adaptation. It details specific examples across different influenza strains and years, strengthening the claim."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 6,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 8,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 9,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 10,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 11,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 14,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 15,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 16,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Recombinant technology leads to a broader immune response that may provide cross-protection, even in a mismatch season.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 0.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [],
+      "filtering_log": [],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Vaccination with a higher-dose recombinant flu vaccine may induce a more robust antibody response than egg-based standard-dose vaccines.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 0.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [],
+      "filtering_log": [],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Flublok (quadrivalent) was evaluated in the pivotal trial against Fluarix (quadrivalent standard-dose vaccine).",
+      "final_verdict": "Agree",
+      "aggregated_score": 18.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 4,
+          "total_weight": 18.0,
+          "items": [
+            1,
+            2,
+            7,
+            11
+          ]
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 1,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 65.0,
+          "text": "Flublok Quadrivalent has been administered to and safety data collected from 4328 adults 50 years of age and older (Study 6 ) and 998 adults 18-49 years of age (Study 7 ). 1 2 SAEs were collected for 6 months post-vaccination via clinic visit or remote contact. Study 6 (NCT02285998) enrolled subjects 50 years of age and older, randomized to receive Flublok Quadrivalent or Comparator (Fluarix Quadrivalent, manufactured by GlaxoSmithKline) as an active control [see Clinical Studies (14.1)] . The safety analysis population included 4328 Flublok Quadrivalent recipients and 4344 Comparator vaccine recipients. The mean age of participants was 62.7 years. Overall, 58% of subjects were female, 80% white/Caucasian, 18% black/African American, 0.9% American Indian/ Alaskan Native, 0.4% Asian, 0.2% Native Hawaiian/Pacific Islander, 0.7% other racial groups, and 5% of Hispanic/Latino ethnicity.\n\nAmong adults 50 years of age and older (Study 6), there were no SAEs considered related to study vaccine.\n\nStudy 7 (NCT02290509) enrolled subjects 18 through 49 years of age randomized to receive Flublok Quadrivalent or a Comparator inactivated influenza vaccine (Fluarix ® Quadrivalent, manufactured by GlaxoSmithKline). The safety analysis population included 998 recipients of Flublok Quadrivalent and 332 Comparator vaccine recipients. The mean age of participants was 33.5 years. Overall, 65% of subjects were female, 59% white/Caucasian, 37% black/African American, 1.0% Native Hawaiian/Pacific Islander, 0.8% American Indian/Alaskan Native, 0.5% Asian, 1.4% other racial groups, and 16% of Hispanic/Latino ethnicity.\n\nAmong adults 18-49 years of age (Study 7), through 6 months post-vaccination, there were no SAEs considered related to study vaccine.\n\n## 1 NCT02285998",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This excerpt explicitly mentions Study 6 as a randomized trial comparing Flublok Quadrivalent to Fluarix Quadrivalent in adults 50 years and older."
+        },
+        {
+          "evidence_number": 2,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 103.0,
+          "text": "#Secondary endpoint of trial.\n\nÞExploratory (prespecified) endpoint of trial.\n\nThe efficacy of Flublok Quadrivalent is relevant to Flublok because both vaccines are manufactured using the same process and have overlapping compositions (see Description [11] ).\n\nStudy 6 evaluated the efficacy of Flublok Quadrivalent in a randomized, observer-blind, active-controlled, multi-center trial conducted during the 2014-2015 influenza season in adults 50 years of age and older. A total of 8963 healthy, medically stable adults (mean age 62.5 years) were randomized in a 1:1 ratio to receive a single dose of Flublok Quadrivalent (n=4474) or a U.S.-licensed quadrivalent inactivated influenza vaccine (Comparator, Fluarix Quadrivalent, manufactured by Glaxo SmithKline) (n=4489).\n\nAmong randomized subjects, 58% were female, 80% white, 18% black/African-American, 2% other races, and 5% of Hispanic/Latino ethnicity. A total of 5186 (60%) subjects were 50-64 years of age and 3486 (40%) were ≥ 65 years of age. Real-time polymerase chain reaction (rtPCR) -confirmed influenza was assessed by active and passive surveillance for influenza-like illness (ILI) beginning 2 weeks post- vaccination until the end of the influenza season, approximately 6 months post- vaccination. ILI was defined as having at least one symptom (no specified duration) in each of two categories of respiratory and systemic symptoms. Respiratory symptoms included sore throat, cough, sputum production, wheezing and difficulty breathing. Systemic symptoms included fever &gt; 99°F ( &gt; 37°C) oral, chills, fatigue, headache and myalgia. For subjects with an episode of ILI, a nasopharyngeal swab sample was collected for rtPCR testing and reflex viral culture of rtPCRpositive samples.",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This section provides further details of Study 6, confirming the comparison between Flublok Quadrivalent and Fluarix Quadrivalent. While it refers to Fluarix as a \"comparator,\" the context clearly indicates a head-to-head evaluation."
+        },
+        {
+          "evidence_number": 7,
+          "document_name": "Liu et al. (2024).pdf",
+          "paragraph_index": 59.0,
+          "text": "## Study design\n\nThe original study was a randomized, open-label trial conducted in the United States during the Northern Hemisphere 2018 -2019 (Year 1) and 2019 2020 (Year 2) in -/uniFB02 uenza seasons. This study is an exploratory analysis. The detailed participant enrollment, randomization, and blinding were previously described 27 -29 . Participant characterisitcs in year 1 are described in Table 2. During Year 1, HCP were strati /uniFB01 edbytwo age groups (18 -44 years and 45 -64 years) and randomized at 4:4:2:2 ratio to receive one of four quadrivalent vaccines: ccIIV4 (Flucelvax), RIV4 (Flublok), Fluzone IIV4 or Fluarix IIV4 (Fig. 1). Serum samples were collected at baseline (day 0 pre-vaccination), 1-month, and 6-months post-vaccination. The Year 2 study was designed to evaluate the antibody responses following 7 different Year 1-Year 2 repeat vaccination regimens: IIV4-IIV4 (Fluzone), IIV4-ccIIV4, IIV4-RIV4, RIV4-ccIIV4, RIV4RIV4, ccIIV4-ccIIV4 and ccIIV4-RIV4 (Fig. 1). Serum samples were collected at baseline (day 0) and 1-month post-vaccination.",
+          "assessment_type": "Agrees",
+          "weight": 4.0,
+          "reasoning": "This describes a study including both Flublok (RIV4) and Fluarix (IIV4). Although not explicitly stating it as a *pivotal* trial, it demonstrates they were evaluated within the same study for immunogenicity."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 6,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 8,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 9,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 10,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 12,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Flublok is produced using a novel production platform in which recombinant HA is expressed in insect cells using a baculovirus expression vector system (BEVS).",
+      "final_verdict": "Agree",
+      "aggregated_score": 19.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 4,
+          "total_weight": 19.0,
+          "items": [
+            1,
+            3,
+            3,
+            6
+          ]
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 1,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 87.0,
+          "text": "## 11 DESCRIPTION\n\nFlublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This excerpt from the Flublok Product Insert clearly describes the production process using insect cells (expresSF+), baculovirus vectors, and column chromatography purification, directly supporting the claim."
+        },
+        {
+          "evidence_number": 3,
+          "document_name": "Treanor et al. (2011).pdf",
+          "paragraph_index": 11.0,
+          "text": "## 2.1. Vaccine\n\nThe vaccine (FluBlok) used in this study consisted of purified hemagglutinin (HA) proteins produced in insect cells using a baculovirus expression system as previously described [9]. The recombinant HA protein is not cleaved in insect cells and is referred to as rHA0. The trivalent vaccine contained 45 mcg (as measured by the single radial immunodiffusion assay) of each purified rHA0 derived from the A/Solomon Islands/3/2006 (H1N1), A/Wisconsin/67/2005 (H3N2), and B/Malaysia/2506/2004 influenza viruses recommended for the 2007-2008 influenza season formulated with 0.005% Tween ® -20 in 10mM sodium phosphate buffer pH 7.0 ± 0.4 without a preservative. Genes were cloned into baculovirus using RT-PCR from the same CDCderived vaccine seed viruses used for the production of licensed inactivated influenza vaccine for that year. Sodium dodecyl sulfatepolyacrylamide gel electrophoresis of the purified monovalent materials indicated that hemagglutinin constitutes at least 90% of the total protein. Placebo consisted of normal saline for injection, USP.",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This description of the FluBlok vaccine used in the study confirms the production process using insect cells and a baculovirus expression system, further supporting the claim.  It also offers additional details like the use of rHA0 and the source of the viral genes."
+        },
+        {
+          "evidence_number": 3,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": 11.0,
+          "text": "and egg-free technologies allowing for guaranteed and faster manufacture of in /uniFB02 uenza vaccines are needed to ensure timely delivery for upcoming epidemic seasons and during potential avian /uniFB02 u pandemics, when egg supply may be impacted. The adoption of alternative vaccine development approaches (including mRNA, vector, and recombinant protein strategies) in the urgent response to the COVID-19 pandemic has demonstrated the feasibility of using more ef /uniFB01 cient methods to produce new, effective vaccines within accelerated development timelines. The recombinant quadrivalent in /uniFB02 uenza vaccine (RIV4, Flublok , ® Supemtek ® [EU, Canada], Sano /uniFB01 Pasteur) was the /uniFB01 rst licensed in /uniFB02 uenza vaccine to be produced using recombinant viral proteins instead of antigens derived from live in /uniFB02 uenza virus (as for inactivated split-virion and subunit vaccines). RIV4 is an unadjuvanted vaccine containing 45 µg of HA/dose from each of the four strains. The production of RIV4 is based on a novel production platform in which recombinant HA (rHA) is expressed in insect cells using a baculovirus expression vector system (BEVS) 22 . In brief, expres SF + insect cells are infected with recombinant baculovirus carrying the relevant in /uniFB02 uenza HA genes, which are expressed under the control of a baculovirus polyhedrin promotor. rHA molecules from the infected cells are extracted using detergent and puri /uniFB01 ed from the clari /uniFB01 ed cell extract using column chromatographies followed by Q membrane /uniFB01 ltration. Puri /uniFB01 ed rHA is suspended in relevant buffer using tangential /uniFB02 ow /uniFB01 ltration and passed through sterile /uniFB01 ltration for storage and formulation 22 . RIV4 has undergone extensive clinical assessment 23 , and was /uniFB01 rst approved by FDA in 2013. It is now licensed in the USA, Canada, Europe, Australia, and various other countries.\n\nThis review focuses on the structural features of BEVS-derived rHA that make RIV4 unique from conventional vaccines, and how these features help to maximise vaccine performance. Notably, the bene /uniFB01 ts of this manufacturing process can be extended to other viral targets, such as COVID-19, where the preservation of conserved epitopes is critical for imparting cross-protection against a constantly evolving and mutating virus.",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This description of the FluBlok vaccine used in the study confirms the production process using insect cells and a baculovirus expression system, further supporting the claim.  It also offers additional details like the use of rHA0 and the source of the viral genes."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 2,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Recombinant HA antigens produced using BEVS have been shown to induce significantly higher levels of broadly cross-reactive antibodies against highly conserved regions of HA compared with egg-derived vaccines.",
+      "final_verdict": "Agree",
+      "aggregated_score": 8.5,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 1,
+          "total_weight": 5.0,
+          "items": [
+            1
+          ]
+        },
+        "Partially Agrees": {
+          "count": 2,
+          "total_weight": 3.5,
+          "items": [
+            2,
+            3
+          ]
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 1,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": 28.0,
+          "text": "clearly demonstrate structural differences between HA pre-fusion and post-fusion states, and the presence of unique neutralising epitopes in the pre-fusion HA0 molecules, which are present in RIV4 (Fig. 2).\n\nStructural differences in the HA polypeptides and rosettes between recombinant and split vaccines have been shown to result in differences, both qualitative and quantitative, in the immune response to vaccines in humans and animals. Portnoff et al. 64 demonstrated that recombinant HA antigens (speci /uniFB01 cally for the H3 strain) produced using BEVS (as used for RIV4), induced signi /uniFB01 cantly higher levels of broadly cross-reactive antibodies against highly conserved regions of the HA head and stem domains than egg-derived split vaccines 64 . Recently Richards et al. 65 examined CD4 T-cell and antibody responses in healthy adults who received egg-derived split vaccine, cell-derived split vaccine or RIV4 for three successive in /uniFB02 uenza seasons (2015 -2016, 2016 2017, -and 2017 2018) 65 -. RIV4 elicited the most robust responses, with signi /uniFB01 cantly higher T-cell and antibody levels than the other two vaccines. Authors postulated that simpler glycosylation of rHA and absence of other in /uniFB02 uenza viral proteins in RIV4 contributed to the observed robust immune response for RIV4 and emphasised the relevance of these features in determining vaccine ef /uniFB01 cacy and long-term immunity 65 .",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This excerpt explicitly states that recombinant HA antigens produced using BEVS induce significantly higher levels of broadly cross-reactive antibodies against conserved regions of HA compared to egg-derived split vaccines, directly supporting the claim.  The reference to Portnoff et al. strengthens this evidence."
+        },
+        {
+          "evidence_number": 2,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": 34.0,
+          "text": "In a study by Nachbagauer et al. 78 , RIV4 induced HA stemspeci /uniFB01 c neutralising antibodies directed against in /uniFB02 uenza subtypes H1, H3 and B haemagglutinin in an age-dependent manner in humans, with the highest titres observed in the elderly 78 . RIV4 also induces antibodies, in both humans and mice, that are speci /uniFB01 c to epitopes in the HA head region, at greater proportions than a traditional mammalian cell-derived subunit vaccine (Flucelvax ® [Trivalent]) 77 . Higher magnitudes of haemagglutination inhibitory antibody response against HA1 have also been observed with RIV4 compared to eggor mammalian cell-derived split vaccines (Flucelvax ® Tetra, Seqirus, and Fluzone ® quadrivalent SD, Sano /uniFB01 Pasteur) 60 . These data warrant additional studies to verify whether rHA elicits a broader antibody repertoire than conventional vaccines and whether this underlies the cross-protection against antigenic drift variants previously observed in clinical trials 12,81 .\n\nRIV4 has a unique ability to induce broadly cross-reactive antibody responses to antigenically drifted A/H3N2 viruses in humans. In a small study by Belongia et al. 82 , participants aged 65 -74 years were immunised with RIV4, a high-dose split-virion inactivated trivalent in /uniFB02 uenza vaccine (Fluzone ® High Dose, Sano /uniFB01 Pasteur; HD-IIV3) or adjuvanted-IIV3 (aIIV3) 82 . Participant sera were tested against four A/H3N2 viruses including a cellpropagated reference vaccine strain, two circulating viruses and an antigenically advanced virus with evidence of antigenic drift. The post-vaccination geometric mean fold rise against the two circulating viruses was twice as high for RIV4 as for HD-IIV3 or aIIV3. Post-vaccination titre against the antigenically drifted H3N2 were generally low and similar across all groups, however, receipt of RIV4 was strongly associated with seroconversion to this strain ( p = 0.003). The investigators suggested that although the circulating A/H3N2 viruses were antigenically similar to the cell-grown vaccine reference virus, egg propagation of the vaccine strains had led to loss of a glycosylation site and",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.0,
+          "reasoning": "This section discusses the broader antibody response induced by RIV4, a BEVS-derived vaccine, compared to other vaccine types (mammalian cell-derived, egg-derived, etc.). While it highlights RIV4's ability to induce antibodies against a wider range of influenza subtypes and epitopes, it doesn't consistently directly compare antibody *levels* against conserved regions specifically between BEVS-derived and egg-derived vaccines, making it only partial support for the claim."
+        },
+        {
+          "evidence_number": 3,
+          "document_name": "Liu et al. (2024).pdf",
+          "paragraph_index": 48.0,
+          "text": "IIV4 and ccIIV4 (15 µ g HA/dose/strain). For A(H3N2), RIV4 vaccination not only improved the quality of the functional neutralizing antibody responses (Fig. 2) by reducing the MN GMT egg/cell ratios in both years, it also signi /uniFB01 cantly increased the quantity of the total A(H3N2) cell HA head binding antibodies (Fig. 4A, Fig. S1A). However, for A(H1N1)pdm09 and B viruses, the difference in HI antibody versus the total HA head binding antibody levels among 4 vaccine groups was less consistent, suggesting that the magnitude of improvement differ between subtypes and were likely determined by the relative immunodominance of the egg-adapted HA epitopes for each subtype. In addition, the egg/cell HA head binding ELISA titer ratios were around 1 for all vaccine antigen subtypes irrespective of vaccine platforms (Fig. 4B), suggesting the total HA binding antibody responses induced by vaccination cannot differentiate egg-adapted epitopes on HA even for A(H3N2). This is in stark contrast to the highly elevated egg/cell GMT ratio in neutralizing antibody responses to egg- vs cell-A(H3N2) viruses (Fig. 5A, B), highlighting the importance of inducing high quality, neutralizing antibody responses from vaccination.\n\nOur study also demonstrated that the impact of vaccine eggadaption may differ between in /uniFB02 uenza virus subtypes, with the biggest impact on neutralizing antibodies to A(H3N2) and moderate impact for in /uniFB02 uenza B vaccine viruses. HA changes due to egg-adaptation resulted in a loss of glycosylation at HA position 197 for both B/Victoria and B/ Yamagata egg vaccine viruses (Table 1), which could alter the antigenicity of in /uniFB02 uenza B virus, particularly for B/Victoria lineage 34 36 -. Disproportional impact of the egg-adapted mutation at HA position 197 on the two B lineages were also observed in this study. B/Victoria virus had a much higher GMT egg/cell titer ratio and proportion of participants with GMT egg/cell ratio ≥ 4thanB/Yamagatavirus in year 1 (Fig. 5). Similar to what was observed for A(H3N2), in Year 2, repeat vaccination with IIV4 boosted the antibody responses to egg-adapted epitopes at HA 197 in B/Victoria vaccine virus, resulting in substantially increased proportions of GMT egg/cell ratio ≥ 4 only in the IIV4-IIV4 arm (Fig. 7).",
+          "assessment_type": "Partially Agrees",
+          "weight": 1.5,
+          "reasoning": "This evidence focuses on the impact of egg-adaptation on antibody responses, particularly for A(H3N2) and influenza B viruses. It highlights the improved quality and quantity of neutralizing antibody responses with RIV4 (BEVS) for A(H3N2).  While this indirectly supports the claim by illustrating the drawbacks of egg-adaptation, it doesn't directly compare antibody levels against *conserved HA regions* between BEVS and egg-derived vaccines."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Flublok contains 45 micrograms (mcg) of HA per strain vs 15 mcg of HA per strain in a standard-dose influenza vaccine.",
+      "final_verdict": "Agree",
+      "aggregated_score": 24.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 5,
+          "total_weight": 24.0,
+          "items": [
+            2,
+            3,
+            5,
+            6,
+            6
+          ]
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 2,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 88.0,
+          "text": "Flublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.\n\n## 12 CLINICAL PHARMACOLOGY",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This excerpt from the Flublok product insert explicitly states that the vaccine contains 135 mcg HA per 0.5 mL dose, with 45 mcg HA for each of the three included influenza virus strains."
+        },
+        {
+          "evidence_number": 5,
+          "document_name": "Hsiao et al. (2023).pdf",
+          "paragraph_index": 6.0,
+          "text": "Quadrivalent recombinant influenza vaccines contain three times the amount of hemagglutinin protein as standard-dose egg-based vaccines, and the recombinant formulation is not susceptible to antigenic drift during manufacturing. Data are needed on the relative effectiveness of recombinant vaccines as compared with standard-dose vaccines against influenza-related outcomes in adults under the age of 65 years.\n\n## METHODS",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This evidence explicitly states that quadrivalent recombinant influenza vaccines (like Flublok) contain three times the amount of hemagglutinin protein as standard-dose egg-based vaccines."
+        },
+        {
+          "evidence_number": 6,
+          "document_name": "Hsiao et al. (2023).pdf",
+          "paragraph_index": 5.0,
+          "text": "## BACKGROUND\n\nQuadrivalent recombinant influenza vaccines contain three times the amount of hemagglutinin protein as standard-dose egg-based vaccines, and the recombinant formulation is not susceptible to antigenic drift during manufacturing. Data are needed on the relative effectiveness of recombinant vaccines as compared with standard-dose vaccines against influenza-related outcomes in adults under the age of 65 years.",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "Identical to Evidence 5; reiterates the threefold difference in HA content between recombinant and standard-dose vaccines."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 1,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 8,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 9,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,580 @@
+{
+  "aggregated_results": [
+    {
+      "claim": "Flublok ensures identical antigenic match with WHO- and FDA-selected flu strains.",
+      "final_verdict": "Agree",
+      "aggregated_score": 6.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 3,
+          "total_weight": 6.0,
+          "items": [
+            1,
+            2,
+            4
+          ]
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 1,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 88.0,
+          "text": "Flublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.\n\n## 12 CLINICAL PHARMACOLOGY",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.0,
+          "reasoning": "This section details the composition of Flublok, including the specific influenza strains for the 2024-2025 season (e.g., A/West Virginia/30/2022 (H1N1)). This partially supports the claim by showing Flublok *includes* the specified strains but doesn't confirm if they are *identically* matched genetically to the WHO/FDA selected strains – it only matches the name designation."
+        },
+        {
+          "evidence_number": 2,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 90.0,
+          "text": "## 12.1 Mechanism of Action\n\nFlublok contains recombinant HA proteins of the three strains of influenza virus specified by health authorities for inclusion in the annual seasonal vaccine. These proteins function as antigens which induce a humoral immune response, measured by hemagglutination inhibition (HI) antibody).\n\nAntibodies against one influenza virus type or subtype confer limited or no protection against another. Furthermore, antibodies to one antigenic variant of influenza virus might not protect against a new antigenic variant of the same type or subtype. Frequent development of antigenic variants through antigenic drift is the virologic basis for seasonal epidemics and the reason for the usual replacement of one or more influenza virus strains in each year's influenza vaccine.",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.0,
+          "reasoning": "This section explains that Flublok contains recombinant HA proteins \"of the three strains of influenza virus specified by health authorities\". Again, this supports the inclusion of *designated* strains but doesn't confirm an *identical* genetic match to the original WHO/FDA selections. It reinforces the use of strains designated by relevant health authorities."
+        },
+        {
+          "evidence_number": 4,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 87.0,
+          "text": "## 11 DESCRIPTION\n\nFlublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.0,
+          "reasoning": "This is a duplicate of Evidence 1 and thus provides the same partial support without confirming *identical* matching."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Flublok contains 3x the hemagglutinin (HA) antigen content of standard-dose flu vaccines, which has been linked to greater immunogenicity vs standard-dose flu vaccines.",
+      "final_verdict": "Agree",
+      "aggregated_score": 6.5,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 3,
+          "total_weight": 6.5,
+          "items": [
+            1,
+            2,
+            4
+          ]
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 1,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 88.0,
+          "text": "Flublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.\n\n## 12 CLINICAL PHARMACOLOGY",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.5,
+          "reasoning": "This section explicitly states that Flublok contains 45 mcg HA per strain.  This directly supports the \"3x the antigen\" portion of the claim, as it confirms the higher HA content. However, it does not mention immunogenicity."
+        },
+        {
+          "evidence_number": 2,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 87.0,
+          "text": "## 11 DESCRIPTION\n\nFlublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.5,
+          "reasoning": "This is identical to Evidence 1, so the assessment is the same.  It strongly supports the HA content portion of the claim but doesn't discuss immunogenicity."
+        },
+        {
+          "evidence_number": 4,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 90.0,
+          "text": "## 12.1 Mechanism of Action\n\nFlublok contains recombinant HA proteins of the three strains of influenza virus specified by health authorities for inclusion in the annual seasonal vaccine. These proteins function as antigens which induce a humoral immune response, measured by hemagglutination inhibition (HI) antibody).\n\nAntibodies against one influenza virus type or subtype confer limited or no protection against another. Furthermore, antibodies to one antigenic variant of influenza virus might not protect against a new antigenic variant of the same type or subtype. Frequent development of antigenic variants through antigenic drift is the virologic basis for seasonal epidemics and the reason for the usual replacement of one or more influenza virus strains in each year's influenza vaccine.",
+          "assessment_type": "Partially Agrees",
+          "weight": 1.5,
+          "reasoning": "This explains that Flublok induces a humoral immune response via HA proteins. This is tangentially related to immunogenicity but doesn't compare its response to standard-dose vaccines, so it only partially addresses the claim. It doesn't provide the comparative information needed for full support."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Cell- and egg-based flu vaccines have the potential to develop mutations during production, which may reduce their effectiveness.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 2.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 1,
+          "total_weight": 2.0,
+          "items": [
+            4
+          ]
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 4,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 88.0,
+          "text": "Flublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.\n\n## 12 CLINICAL PHARMACOLOGY",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.0,
+          "reasoning": "This details Flublok's recombinant production process using insect cells and baculovirus vectors. By emphasizing the precise control over HA protein production, it indirectly supports the claim by implying that other methods (cell- and egg-based) might lack this precision and thus be more prone to mutations. However, it doesn't explicitly state that these other methods *do* experience mutations."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 1,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 2,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Recombinant technology leads to a broader immune response that may provide cross-protection, even in a mismatch season.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 0.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [],
+      "filtering_log": [],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Vaccination with a higher-dose recombinant flu vaccine may induce a more robust antibody response than egg-based standard-dose vaccines.",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 0.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [],
+      "filtering_log": [],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Flublok (quadrivalent) was evaluated in the pivotal trial against Fluarix (quadrivalent standard-dose vaccine).",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 0.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [],
+      "filtering_log": [],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Flublok is produced using a novel production platform in which recombinant HA is expressed in insect cells using a baculovirus expression vector system (BEVS).",
+      "final_verdict": "Partially Agree",
+      "aggregated_score": 0.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [],
+      "filtering_log": [],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Recombinant HA antigens produced using BEVS have been shown to induce significantly higher levels of broadly cross-reactive antibodies against highly conserved regions of HA compared with egg-derived vaccines.",
+      "final_verdict": "Agree",
+      "aggregated_score": 7.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Partially Agrees": {
+          "count": 4,
+          "total_weight": 7.0,
+          "items": [
+            1,
+            2,
+            3,
+            5
+          ]
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 1,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": 13.0,
+          "text": "## POTENTIAL ANTIGENIC MISMATCH OF INFLUENZA VACCINE VIRUS GROWN IN EGG OR CELLS DUE TO ADAPTIVE MUTATIONS IN THE HA PRIMARY STRUCTURE\n\nA known risk of traditional split or subunit vaccines is the potential for the candidate vaccine virus or working virus seeds to acquire adaptive mutations as they grow in embryonated chicken egg or mammalian host cells during vaccine manufacture. Such adaptive mutations in HA peptides may reduce the effectiveness of the resultant vaccine 24 26 -. Raymond et al. 24 showed that an eggadapted A/California/07/2009 (H1N1) vaccine strain acquired a mutation resulting in the substitution of glutamine with arginine at position 226 which in turn induced antibodies speci /uniFB01 c to receptor binding site that bound to vaccine-derived HA preferentially over the circulating wild-type virus 24 . During the 2012 -2013 northern hemisphere in /uniFB02 uenza vaccination campaign, HA from an egg-adapted A/Victoria/361/2011 (H3N2) virus used for vaccine manufacturing differed from the WHO-recommended prototype and several other wild-type in /uniFB02 uenza viruses in three positions, H156Q, G186V, and S219Y 25 . The low vaccine effectiveness (41%) observed for H3N2 in the 2012 -2013 season was attributed to these three mutations during vaccine production 25 . Other antigenic mutations introduced by egg-adaptation of the vaccine strain during vaccine manufacturing are thought to have contributed to low vaccine effectiveness estimates for H3N2 in other in /uniFB02 uenza seasons 26,27 .",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.0,
+          "reasoning": "This evidence describes the problem of adaptive mutations in HA when grown in eggs, which can lead to reduced vaccine effectiveness.  This indirectly supports the claim by highlighting a potential advantage of BEVS production, which avoids these mutations. However, it doesn't directly compare antibody levels or cross-reactivity between the two methods."
+        },
+        {
+          "evidence_number": 3,
+          "document_name": "Arunachalam et al. (2021).pdf",
+          "paragraph_index": 11.0,
+          "text": "and egg-free technologies allowing for guaranteed and faster manufacture of in /uniFB02 uenza vaccines are needed to ensure timely delivery for upcoming epidemic seasons and during potential avian /uniFB02 u pandemics, when egg supply may be impacted. The adoption of alternative vaccine development approaches (including mRNA, vector, and recombinant protein strategies) in the urgent response to the COVID-19 pandemic has demonstrated the feasibility of using more ef /uniFB01 cient methods to produce new, effective vaccines within accelerated development timelines. The recombinant quadrivalent in /uniFB02 uenza vaccine (RIV4, Flublok , ® Supemtek ® [EU, Canada], Sano /uniFB01 Pasteur) was the /uniFB01 rst licensed in /uniFB02 uenza vaccine to be produced using recombinant viral proteins instead of antigens derived from live in /uniFB02 uenza virus (as for inactivated split-virion and subunit vaccines). RIV4 is an unadjuvanted vaccine containing 45 µg of HA/dose from each of the four strains. The production of RIV4 is based on a novel production platform in which recombinant HA (rHA) is expressed in insect cells using a baculovirus expression vector system (BEVS) 22 . In brief, expres SF + insect cells are infected with recombinant baculovirus carrying the relevant in /uniFB02 uenza HA genes, which are expressed under the control of a baculovirus polyhedrin promotor. rHA molecules from the infected cells are extracted using detergent and puri /uniFB01 ed from the clari /uniFB01 ed cell extract using column chromatographies followed by Q membrane /uniFB01 ltration. Puri /uniFB01 ed rHA is suspended in relevant buffer using tangential /uniFB02 ow /uniFB01 ltration and passed through sterile /uniFB01 ltration for storage and formulation 22 . RIV4 has undergone extensive clinical assessment 23 , and was /uniFB01 rst approved by FDA in 2013. It is now licensed in the USA, Canada, Europe, Australia, and various other countries.\n\nThis review focuses on the structural features of BEVS-derived rHA that make RIV4 unique from conventional vaccines, and how these features help to maximise vaccine performance. Notably, the bene /uniFB01 ts of this manufacturing process can be extended to other viral targets, such as COVID-19, where the preservation of conserved epitopes is critical for imparting cross-protection against a constantly evolving and mutating virus.",
+          "assessment_type": "Partially Agrees",
+          "weight": 2.0,
+          "reasoning": "This evidence describes the BEVS production process for Flublok and highlights it as the first licensed influenza vaccine using recombinant viral proteins. This context is relevant but doesn't offer a direct comparison to egg-derived vaccines regarding antibody levels or cross-reactivity.  It sets the stage for the claim but doesn't prove it."
+        },
+        {
+          "evidence_number": 2,
+          "document_name": "Treanor et al. (2011).pdf",
+          "paragraph_index": 8.0,
+          "text": "## 1. Introduction\n\nAlthough embryonated hen's eggs have been used to generate effective influenza vaccines for many years, this system does have several important drawbacks. Vaccine manufacturing using eggs requires specialized facilities, and the ability to scale up egg production rapidly in response to an emergency is limited. In addition, poultryarepotentiallyvulnerabletothesamesubtypesofinfluenza\n\nviruses that might also be responsible for pandemic influenza. It is usually necessary to adapt candidate vaccine viruses for high yield growth in eggs, a process that can be time consuming, is not always successful, and which can select receptor variants that may not be optimally representative of circulating influenza strains [1,2].\n\nExpression of proteins in insect cells using recombinant baculovirus has emerged as a promising technology for vaccine production. New recombinant baculoviruses can be generated quickly from sequence data, protein expression is very efficient under the control of the baculovirus polyhedrin promoter, and post translational modifications of the protein are generally similar to other eukaryotic systems. In previous studies, we have evaluated baculovirus-expressed recombinant influenza virus hemagglutinins (rHA0s) as influenza vaccines in humans. Monovalent and bivalent rHA0s have been well tolerated and immunogenic in\n\nyoung adults and adults 65 and older [3-5]. More recent studies have evaluated rHA0 vaccine formulations in healthy adults, subjects aged 50-64 years of age [6] and subjects 65 and older [7,8]. These studies have consistently shown excellent tolerability and antibody responses similar to those seen with egg-derived influenza vaccines. Finally, in a preliminary field efficacy evaluation, recipients of the rHA0 vaccine had reduced rates of culture-positive CDC-defined influenza-like illness compared with placebo recipients, although the study was small [9].\n\nIn the present study, we performed a much larger assessment of the immunogenicity, safety, and protective efficacy of the final formulation of trivalent rHA0 vaccine in a population of healthy young adults.",
+          "assessment_type": "Partially Agrees",
+          "weight": 1.5,
+          "reasoning": "This evidence again points out the drawbacks of egg-based production (adaptation, time, potential for receptor variants). It also mentions studies showing that BEVS-produced rHA0 vaccines are \"well tolerated and immunogenic\" with antibody responses \"similar to those seen with egg-derived influenza vaccines.\" This doesn't contradict the claim, but doesn't provide direct evidence of *higher* antibody levels or cross-reactivity."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 4,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    },
+    {
+      "claim": "Flublok contains 45 micrograms (mcg) of HA per strain vs 15 mcg of HA per strain in a standard-dose influenza vaccine.",
+      "final_verdict": "Agree",
+      "aggregated_score": 10.0,
+      "evidence_breakdown": {
+        "Agrees": {
+          "count": 2,
+          "total_weight": 10.0,
+          "items": [
+            2,
+            4
+          ]
+        },
+        "Partially Agrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        },
+        "Disagrees": {
+          "count": 0,
+          "total_weight": 0.0,
+          "items": []
+        }
+      },
+      "key_supporting_evidence": [
+        {
+          "evidence_number": 2,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 88.0,
+          "text": "Flublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.\n\n## 12 CLINICAL PHARMACOLOGY",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This section of the prescribing information explicitly states that Flublok is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the three influenza virus strains. This directly supports the claim."
+        },
+        {
+          "evidence_number": 4,
+          "document_name": "FlublokPI.pdf",
+          "paragraph_index": 87.0,
+          "text": "## 11 DESCRIPTION\n\nFlublok [Influenza Vaccine] is a sterile, clear, colorless injection containing recombinant hemagglutinin (HA) proteins from three influenza viruses for intramuscular use. It contains purified HA proteins produced in a continuous insect cell line ( expres SF+ ® ) that is derived from Sf9 cells of the fall armyworm, Spodoptera frugiperda (which is related to moths, caterpillars and butterflies), and grown in serum-free medium composed of chemicallydefined lipids, vitamins, amino acids, and mineral salts. Each of the three HAs is expressed in this cell line using a baculovirus vector ( Autographa californica nuclear polyhedrosis virus), extracted from the cells with Triton X-100 and further purified by column chromatography. The purified HAs are then blended and filled into single-dose syringes.\n\nFlublok is standardized according to United States Public Health Service (USPHS) requirements. For the 2024-2025 influenza season it is formulated to contain 135 mcg HA per 0.5 mL dose, with 45 mcg HA of each of the following 3 influenza virus strains: A/West Virginia/30/2022 (A/Wisconsin/67/2022 pdm09-like virus) (H1N1), A/Massachusetts/18/ 2022 (H3N2) and B/Austria/1359417/2021.\n\nA single 0.5 mL dose of Flublok contains sodium chloride (4.4 mg), monobasic sodium phosphate (0.2 mg), dibasic sodium phosphate (0.5 mg), and polysorbate 20 (Tween ® 20) (27.5 mcg). Each 0.5 mL dose of Flublok may also contain residual amounts of baculovirus and Spodoptera frugiperda cell proteins ( ≤ 14.3 mcg), baculovirus and cellular DNA ( ≤ 10 ng), and Triton X-100 ( ≤ 100 mcg).\n\nFlublok contains no egg proteins, antibiotics, or preservatives. The single-dose, prefilled syringes contain no natural rubber latex.",
+          "assessment_type": "Agrees",
+          "weight": 5.0,
+          "reasoning": "This is a duplicate of Evidence 2 and provides the same explicit confirmation of 45 mcg HA per strain in Flublok."
+        }
+      ],
+      "filtering_log": [
+        {
+          "evidence_number": 1,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "evidence_number": 3,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 2 below threshold 3.0"
+        },
+        {
+          "evidence_number": 5,
+          "filter": "Relevancy Score Filter",
+          "reason": "Score 1 below threshold 3.0"
+        },
+        {
+          "filter": "Duplicate Evidence",
+          "reason": "Duplicate evidence items are being kept as requested"
+        }
+      ],
+      "configuration": {
+        "relevancy_score_threshold": 3.0,
+        "base_weights": {
+          "Agrees": 1.0,
+          "Partially Agrees": 0.5,
+          "Disagrees": -1.0,
+          "Not applicable": 0.0
+        },
+        "final_verdict_thresholds": {
+          "strong_support": 3.0,
+          "partial_support": 0.0
+        },
+        "duplicate_similarity_threshold": 0.9,
+        "use_evidence_score": false,
+        "remove_duplicates": false
+      }
+    }
+  ]
+}

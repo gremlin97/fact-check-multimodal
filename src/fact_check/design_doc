@@ -1,0 +1,103 @@
+# Fact-Checking System Design Document
+
+## Core Problem Statement
+
+The medical fact-checking system addresses a critical challenge in healthcare information verification: how to systematically and reliably verify medical claims against scientific literature and clinical documents. This problem is particularly complex due to:
+
+1. The nuanced nature of medical claims
+2. The need for context-aware understanding
+3. The requirement for evidence-based verification
+4. The importance of accurate and transparent reasoning
+
+## System Architecture Overview
+
+### Document Processing Pipeline
+
+The system begins with a robust document processing pipeline that handles medical PDFs. This was designed with several key considerations:
+
+- **Intelligent Text Extraction**: Using both docling and PyPDF as fallback ensures reliable extraction even from complex medical documents with tables,  and formatted text.
+
+- **Context-Preserving Chunking**: The chunking strategy (implemented in `chunk_text_by_paragraphs`) is specifically designed to:
+  - Maintain semantic coherence by keeping related content together
+  - Handle varying document structures (headers, lists, paragraphs)
+  - Create overlapping chunks to preserve context across boundaries
+  - Adapt chunk sizes based on content complexity
+
+- **Hybrid Embedding Approach**: The system uses both dense and sparse embeddings:
+  - Dense embeddings (via Gemini) capture semantic meaning
+  - Sparse embeddings (via BM25) capture keyword-specific relevance
+  - This combination improves retrieval accuracy, especially for technical medical terms
+
+### Claim Verification Architecture
+
+The verification process is structured in layers:
+
+1. **Evidence Retrieval Layer**
+   - Hybrid search combining semantic similarity and keyword matching
+   - Source diversity checks to prevent single-source bias
+   - Configurable retrieval parameters (top_k, similarity thresholds)
+
+2. **Analysis Layer**
+   - AI-powered explanation generation
+   - Structured assessment of evidence relevance
+   - Explicit reasoning about support/contradiction
+
+3. **Evidence Aggregation Layer**
+   - Weighted scoring system for evidence assessment
+   - Handling of conflicting evidence
+   - Confidence-based final verdicts
+
+## Evidence Aggregation Design
+
+The evidence aggregation system was designed to address several key challenges:
+
+### Weighting Mechanism
+
+The weighting system considers multiple factors:
+- Relevancy scores (1-5 scale)
+- Assessment types (Agrees, Partially Agrees, Disagrees)
+- Evidence quality metrics
+- Source reliability
+
+The weights are configured to:
+- Prioritize highly relevant evidence
+- Account for partial agreement
+- Penalize contradictory evidence
+- Balance multiple pieces of supporting evidence
+
+### Filtering Logic
+
+The system implements multiple filtering stages:
+1. **Relevancy Filtering**: Removes low-relevance evidence
+2. **Assessment Type Filtering**: Handles "Not applicable" cases
+3. **Optional Duplicate Removal**: Configurable deduplication
+4. **Content Matching**: Special handling for quantitative claims
+
+### Verdict Determination
+
+The verdict system uses configurable thresholds:
+- Strong support threshold (default: 3.0)
+- Partial support threshold (default: 0.0)
+- Aggregated scoring mechanism
+
+This allows for nuanced conclusions rather than binary true/false outcomes.
+
+## Output Format Design
+
+The system provides multiple output formats designed for different use cases:
+
+### Standard JSON Output
+- Detailed evidence and explanations
+- Full traceability of reasoning
+- Source documentation
+
+### Aggregated Results
+- Evidence breakdown by category
+- Weighted assessments
+- Key supporting evidence
+- Filtering logs for transparency
+
+### Custom Integration Format
+- Simplified structure
+- Essential claim-evidence mapping
+- Easy integration with other systems

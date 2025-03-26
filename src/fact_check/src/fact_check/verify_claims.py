@@ -228,6 +228,7 @@ def generate_explanation(claim: str, evidence_list: List[Dict[str, Any]]) -> Dic
         
         Important context about the evidence:
         - These text chunks were retrieved using semantic similarity to the claim
+        - The retrieval process is based on embedding similarity, not literal text matching
         - Some chunks may be completely irrelevant or contain noise despite being retrieved
         - The paragraph index indicates which section of the document the text came from
         - Evidence labeled as "type: image" contains descriptions of visual content like tables, charts, or diagrams

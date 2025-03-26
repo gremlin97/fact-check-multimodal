@@ -391,7 +391,7 @@ for i, pdf_file in enumerate(pdf_files[start_index:], start=start_index):
         # Process each paragraph
         text_batch = []
         text_count = 0
-        batch_size = 10
+        batch_size = 100
         context_window_size = 2  # Number of paragraphs before and after to include as context
         
         # Check if the existing index supports sparse vectors
@@ -408,10 +408,6 @@ for i, pdf_file in enumerate(pdf_files[start_index:], start=start_index):
         for i, paragraph in enumerate(paragraphs):
             if i % 10 == 0:  # Log progress every 10 paragraphs
                 log_status(f"  Processing paragraph {i+1}/{len(paragraphs)}")
-            
-            if not paragraph or len(paragraph.strip()) < 50:  # Skip empty or very short paragraphs
-                logger.debug(f"Skipping empty or very short paragraph {i}")
-                continue
             
             # Determine if paragraph is a header
             is_header = paragraph.startswith('#')
